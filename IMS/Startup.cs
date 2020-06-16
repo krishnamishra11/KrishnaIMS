@@ -1,17 +1,22 @@
 using IMS.BusinessLayer;
 using IMS.BusinessLayer.Interfaces;
+using IMS.JWTAuth;
+using IMS.JWTAuth.Interfaces;
 using IMS.Models;
 using IMS.Models.Interfaces;
 using IMS.Repository;
 using IMS.Repository.Interfaces;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Linq;
+using System.Text;
 
 namespace IMS
 {
@@ -46,6 +51,28 @@ namespace IMS
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "IMS API", Version = "v1" });
                 c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
             });
+            string key = "something from amitab and something from Dharmendra and finnlay something from mithun chkroberti if you like something from venod mehara also";
+            services.AddAuthentication(
+                x =>
+                {
+                    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                }
+                ).AddJwtBearer(
+                x => {
+                    x.RequireHttpsMetadata = false;
+                    x.SaveToken = false;
+                    x.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuerSigningKey = true,
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(key)),
+                        ValidateIssuer = false,
+                        ValidateAudience = false
+                    };                      
+                    }
+                );
+
+            services.AddSingleton<IJWTAuthManager>(new JWDAuthManager(key));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -67,6 +94,7 @@ namespace IMS
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

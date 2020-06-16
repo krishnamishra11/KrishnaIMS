@@ -22,7 +22,7 @@ namespace IMS.Controllers
             _distributedCache = distributedCache;
         }
         /// <summary>
-        /// GetVeondors has Redis Cache
+        /// GetVeondors has Redis Cache implemented
         /// </summary>
         /// <returns></returns>
      [HttpGet]

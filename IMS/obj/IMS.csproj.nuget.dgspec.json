@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ctsdotnetfsd04\\source\\repos\\IMS\\IMS\\IMS.csproj": {}
+    "C:\\Users\\ctsdotnetfsd04\\source\\repos\\KrishnaIMS\\IMS\\IMS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ctsdotnetfsd04\\source\\repos\\IMS\\IMS\\IMS.csproj": {
+    "C:\\Users\\ctsdotnetfsd04\\source\\repos\\KrishnaIMS\\IMS\\IMS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ctsdotnetfsd04\\source\\repos\\IMS\\IMS\\IMS.csproj",
+        "projectUniqueName": "C:\\Users\\ctsdotnetfsd04\\source\\repos\\KrishnaIMS\\IMS\\IMS.csproj",
         "projectName": "IMS",
-        "projectPath": "C:\\Users\\ctsdotnetfsd04\\source\\repos\\IMS\\IMS\\IMS.csproj",
+        "projectPath": "C:\\Users\\ctsdotnetfsd04\\source\\repos\\KrishnaIMS\\IMS\\IMS.csproj",
         "packagesPath": "C:\\Users\\ctsdotnetfsd04\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ctsdotnetfsd04\\source\\repos\\IMS\\IMS\\obj\\",
+        "outputPath": "C:\\Users\\ctsdotnetfsd04\\source\\repos\\KrishnaIMS\\IMS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -42,6 +42,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
               "version": "[3.1.5, )"
@@ -79,6 +87,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.4.1, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.6.0, )"
             }
           },
           "imports": [

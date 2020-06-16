@@ -1,0 +1,7 @@
+organization=krishnamishra11
+projectKey=krishnamishra11_KrishnaIMS
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.8621
+dashboardUrl=https://sonarcloud.io/dashboard?id=krishnamishra11_KrishnaIMS
+ceTaskId=AXK423E7lLaLEx4twvgH
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXK423E7lLaLEx4twvgH

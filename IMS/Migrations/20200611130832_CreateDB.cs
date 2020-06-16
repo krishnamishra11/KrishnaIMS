@@ -98,6 +98,7 @@ namespace IMS.Migrations
 
             migrationBuilder.DropTable(
                 name: "Vendors");
+            
         }
     }
 }
