@@ -26,11 +26,11 @@ namespace IMS.Controllers
             _jWTAuthManager = jWTAuthManager;
         }
 
-        
+
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Person>>> GetPerson()
+        public IActionResult GetPerson()
         {
-            return await _context.Person.ToListAsync();
+            return Ok( _context.Person.Select(q => new {q.Id, q.Name}).ToList());
         }
 
         
@@ -43,6 +43,7 @@ namespace IMS.Controllers
             {
                 return NotFound();
             }
+            person.Password = "";
 
             return person;
         }

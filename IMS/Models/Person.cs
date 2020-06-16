@@ -12,7 +12,6 @@ namespace IMS.Models
         [Required]
         public string Name { get; set; }
         [Required]
-        [JsonIgnore]
         public string Password { get; set; }
 
     }
