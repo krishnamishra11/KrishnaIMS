@@ -14,6 +14,7 @@ namespace IMS.Controllers
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
+    [ApiExplorerSettings(IgnoreApi = true)]
     public class PurchaseOrdersController : ControllerBase
     {
         private readonly IBLPurchaseOrder  _bLPurchaseOrder;
@@ -53,12 +54,12 @@ namespace IMS.Controllers
             return Ok(po);
         }
 
-        [HttpGet("{name:alpha}")]
-        public ActionResult GetPurchaseOrdersByVendorName(string name)
-        {
-            var po = _bLPurchaseOrder.FindByVendorName(name);
-            return Ok(po);
-        }
+        //[HttpGet("{name:alpha}")]
+        //public ActionResult GetPurchaseOrdersByVendorName(string name)
+        //{
+        //    var po = _bLPurchaseOrder.FindByVendorName(name);
+        //    return Ok(po);
+        //}
 
 
         [HttpGet("{id:int}")]

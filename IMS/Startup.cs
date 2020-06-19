@@ -71,7 +71,7 @@ namespace IMS
                     };                      
                     }
                 );
-
+            
             services.AddSingleton<IJWTAuthManager>(new JWDAuthManager(key));
         }
 
@@ -101,6 +101,7 @@ namespace IMS
             {
                 endpoints.MapControllers();
             });
+           
         }
     }
 }

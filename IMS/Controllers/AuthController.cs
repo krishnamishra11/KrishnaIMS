@@ -9,10 +9,12 @@ using IMS.Models;
 using IMS.JWTAuth.Interfaces;
 using Microsoft.EntityFrameworkCore.Query.Internal;
 using Microsoft.AspNetCore.Authorization;
+using Newtonsoft.Json;
 
 namespace IMS.Controllers
 {   
     [Authorize]
+    [ApiExplorerSettings(IgnoreApi = true)]
     [Route("api/[controller]")]
     [ApiController]
     public class AuthController : ControllerBase

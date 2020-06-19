@@ -66,18 +66,18 @@ namespace IMS.Controllers
             return vendor;
         }
 
-        [HttpGet("{id:alpha}")]
-        //[Route("VendorByName")]
-        public ActionResult<IEnumerable<Vendor>> GetVendorByName(string id)
-        {
-            var vendors = _blVendor.FindByName(id);
+        //[HttpGet("{id:alpha}")]
+        ////[Route("VendorByName")]
+        //public ActionResult<IEnumerable<Vendor>> GetVendorByName(string id)
+        //{
+        //    var vendors = _blVendor.FindByName(id);
 
-            if (vendors == null)
-            {
-                return NotFound();
-            }
-            return Ok(vendors);
-        }
+        //    if (vendors == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    return Ok(vendors);
+        //}
         [HttpPut("{id}")]
         public IActionResult PutVendor(int id, Vendor vendor)
         {

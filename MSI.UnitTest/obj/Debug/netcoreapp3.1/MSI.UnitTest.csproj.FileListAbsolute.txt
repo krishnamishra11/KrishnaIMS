@@ -480,3 +480,10 @@ C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\MSI.UnitTest\obj\Debug\netcoreap
 C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\MSI.UnitTest\obj\Debug\netcoreapp3.1\MSI.UnitTest.dll
 C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\MSI.UnitTest\obj\Debug\netcoreapp3.1\MSI.UnitTest.pdb
 C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\MSI.UnitTest\obj\Debug\netcoreapp3.1\MSI.UnitTest.genruntimeconfig.cache
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\MSI.UnitTest\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\MSI.UnitTest\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\MSI.UnitTest\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\MSI.UnitTest\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\MSI.UnitTest\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\MSI.UnitTest\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\MSI.UnitTest\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
