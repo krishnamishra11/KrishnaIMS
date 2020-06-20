@@ -27,7 +27,11 @@ steps:
 - task: SonarCloudPublish@1
   inputs:
     pollingTimeoutSec: '300'
-- task: DotNetCoreCLI@2
+- task: VSTest@2
   inputs:
-    command: 'build'
-    projects: 'IMS.UnitTest\'
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: |
+      **\*test*.dll
+      !**\*TestAdapter.dll
+      !**\obj\**
+    searchFolder: '$(System.DefaultWorkingDirectory)'
