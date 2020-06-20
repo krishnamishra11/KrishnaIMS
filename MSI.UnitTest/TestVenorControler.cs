@@ -1,5 +1,6 @@
 ﻿using IMS.BusinessLayer.Interfaces;
 using IMS.Controllers;
+using IMS.Models;
 using Microsoft.Extensions.Caching.Distributed;
 using Moq;
 using NUnit.Framework;
@@ -31,6 +32,17 @@ namespace MSI.UnitTest
             
             vendorsController.GetVendor(id);
             _blVendor.Verify(q => q.FindById(id), Times.Once);
+
+        }
+
+        [Test]
+        public void TestGetVendors_Post()
+        {
+            int id = 1;
+            Vendor vendor = new Vendor();
+
+            vendorsController.PostVendor(vendor);
+            _blVendor.Verify(q => q.Add(vendor), Times.Once);
 
         }
     }
