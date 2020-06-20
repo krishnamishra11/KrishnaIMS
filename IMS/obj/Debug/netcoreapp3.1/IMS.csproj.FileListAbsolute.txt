@@ -328,6 +328,9 @@ C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Debug\netcoreapp3.1\Syst
 C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
 C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Debug\netcoreapp3.1\System.Web.Http.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Debug\netcoreapp3.1\Swashbuckle.Core.dll
 C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\obj\Debug\netcoreapp3.1\IMS.csproj.CoreCompileInputs.cache
 C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\obj\Debug\netcoreapp3.1\IMS.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\obj\Debug\netcoreapp3.1\IMS.MvcApplicationPartsAssemblyInfo.cache

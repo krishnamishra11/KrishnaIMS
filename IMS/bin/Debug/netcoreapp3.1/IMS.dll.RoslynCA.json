@@ -12,67 +12,18 @@
       },
       "results": [
         {
-          "ruleId": "S3925",
+          "ruleId": "S125",
           "level": "warning",
-          "message": "Update this implementation of 'ISerializable' to conform to the recommended serialization pattern.",
+          "message": "Remove this commented out code.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/IMS/IMS/IMSExceptions/InvalidDeliveryDate.cs",
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/Controllers/PurchaseOrdersController.cs",
                 "region": {
-                  "startLine": 6,
-                  "startColumn": 18,
-                  "endLine": 6,
-                  "endColumn": 37
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/IMS/IMS/IMSExceptions/InvalidDeliveryDate.cs",
-                "region": {
-                  "startLine": 6,
-                  "startColumn": 12,
-                  "endLine": 6,
-                  "endColumn": 17
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/IMS/IMS/IMSExceptions/InvalidDeliveryDate.cs",
-                "region": {
-                  "startLine": 6,
-                  "startColumn": 12,
-                  "endLine": 6,
-                  "endColumn": 17
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1,
-            "customProperties": {
-              "0": "Add 'System.SerializableAttribute' attribute on 'InvalidDeliveryDate' because it implements 'ISerializable'.",
-              "1": "Add a 'protected' constructor 'InvalidDeliveryDate(SerializationInfo, StreamingContext)'."
-            }
-          }
-        },
-        {
-          "ruleId": "S3376",
-          "level": "warning",
-          "message": "Make this class name end with 'Exception'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/IMS/IMS/IMSExceptions/InvalidDeliveryDate.cs",
-                "region": {
-                  "startLine": 6,
-                  "startColumn": 18,
-                  "endLine": 6,
-                  "endColumn": 37
+                  "startLine": 60,
+                  "startColumn": 9,
+                  "endLine": 60,
+                  "endColumn": 12
                 }
               }
             }
@@ -82,67 +33,18 @@
           }
         },
         {
-          "ruleId": "S3925",
+          "ruleId": "S125",
           "level": "warning",
-          "message": "Update this implementation of 'ISerializable' to conform to the recommended serialization pattern.",
+          "message": "Remove this commented out code.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/IMS/IMS/IMSExceptions/NoMediumExists.cs",
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/Controllers/VendorsController.cs",
                 "region": {
-                  "startLine": 5,
-                  "startColumn": 18,
-                  "endLine": 5,
-                  "endColumn": 32
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/IMS/IMS/IMSExceptions/NoMediumExists.cs",
-                "region": {
-                  "startLine": 5,
-                  "startColumn": 12,
-                  "endLine": 5,
-                  "endColumn": 17
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/IMS/IMS/IMSExceptions/NoMediumExists.cs",
-                "region": {
-                  "startLine": 5,
-                  "startColumn": 12,
-                  "endLine": 5,
-                  "endColumn": 17
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1,
-            "customProperties": {
-              "0": "Add 'System.SerializableAttribute' attribute on 'NoMediumExists' because it implements 'ISerializable'.",
-              "1": "Add a 'protected' constructor 'NoMediumExists(SerializationInfo, StreamingContext)'."
-            }
-          }
-        },
-        {
-          "ruleId": "S3376",
-          "level": "warning",
-          "message": "Make this class name end with 'Exception'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/IMS/IMS/IMSExceptions/NoMediumExists.cs",
-                "region": {
-                  "startLine": 5,
-                  "startColumn": 18,
-                  "endLine": 5,
-                  "endColumn": 32
+                  "startLine": 72,
+                  "startColumn": 9,
+                  "endLine": 72,
+                  "endColumn": 12
                 }
               }
             }
@@ -152,67 +54,39 @@
           }
         },
         {
-          "ruleId": "S3925",
+          "ruleId": "S125",
           "level": "warning",
-          "message": "Update this implementation of 'ISerializable' to conform to the recommended serialization pattern.",
+          "message": "Remove this commented out code.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/IMS/IMS/IMSExceptions/VenoderIdNotFound.cs",
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/Startup.cs",
                 "region": {
-                  "startLine": 5,
-                  "startColumn": 18,
-                  "endLine": 5,
-                  "endColumn": 35
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/IMS/IMS/IMSExceptions/VenoderIdNotFound.cs",
-                "region": {
-                  "startLine": 5,
-                  "startColumn": 12,
-                  "endLine": 5,
-                  "endColumn": 17
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/IMS/IMS/IMSExceptions/VenoderIdNotFound.cs",
-                "region": {
-                  "startLine": 5,
-                  "startColumn": 12,
-                  "endLine": 5,
-                  "endColumn": 17
+                  "startLine": 45,
+                  "startColumn": 17,
+                  "endLine": 45,
+                  "endColumn": 60
                 }
               }
             }
           ],
           "properties": {
-            "warningLevel": 1,
-            "customProperties": {
-              "0": "Add 'System.SerializableAttribute' attribute on 'VenoderIdNotFound' because it implements 'ISerializable'.",
-              "1": "Add a 'protected' constructor 'VenoderIdNotFound(SerializationInfo, StreamingContext)'."
-            }
+            "warningLevel": 1
           }
         },
         {
-          "ruleId": "S3376",
+          "ruleId": "S125",
           "level": "warning",
-          "message": "Make this class name end with 'Exception'.",
+          "message": "Remove this commented out code.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/IMS/IMS/IMSExceptions/VenoderIdNotFound.cs",
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/Startup.cs",
                 "region": {
-                  "startLine": 5,
-                  "startColumn": 18,
-                  "endLine": 5,
-                  "endColumn": 35
+                  "startLine": 55,
+                  "startColumn": 17,
+                  "endLine": 55,
+                  "endColumn": 56
                 }
               }
             }
@@ -228,11 +102,32 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/IMS/IMS/Controllers/PurchaseOrdersController.cs",
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/Controllers/AuthController.cs",
                 "region": {
-                  "startLine": 3,
+                  "startLine": 2,
                   "startColumn": 1,
-                  "endLine": 3,
+                  "endLine": 2,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/Controllers/AuthController.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 1,
+                  "endLine": 5,
                   "endColumn": 33
                 }
               }
@@ -243,18 +138,18 @@
           }
         },
         {
-          "ruleId": "S101",
+          "ruleId": "S1128",
           "level": "warning",
-          "message": "Rename class 'IMSContext' to match pascal case naming rules, consider using 'ImsContext'.",
+          "message": "Remove this unnecessary 'using'.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/IMS/IMS/Models/IMSContext.cs",
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/Controllers/AuthController.cs",
                 "region": {
-                  "startLine": 5,
-                  "startColumn": 18,
-                  "endLine": 5,
-                  "endColumn": 28
+                  "startLine": 10,
+                  "startColumn": 1,
+                  "endLine": 10,
+                  "endColumn": 52
                 }
               }
             }
@@ -270,7 +165,49 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/IMS/IMS/Controllers/VendorsController.cs",
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/Controllers/AuthController.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 1,
+                  "endLine": 12,
+                  "endColumn": 23
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/Controllers/PurchaseOrdersController.cs",
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 1,
+                  "endLine": 4,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/Controllers/VendorsController.cs",
                 "region": {
                   "startLine": 3,
                   "startColumn": 1,
@@ -291,7 +228,49 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/IMS/IMS/IMSExceptions/InvalidDeliveryDate.cs",
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/Filters/SwagarFilter.cs",
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/Filters/SwagarFilter.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 1,
+                  "endLine": 6,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/IMSExceptions/InvalidDeliveryDate.cs",
                 "region": {
                   "startLine": 2,
                   "startColumn": 1,
@@ -312,7 +291,259 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/IMS/IMS/Models/PurchaseOrder.cs",
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/JWTAuth/Interfaces/IJWTAuthManager.cs",
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 18
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/JWTAuth/Interfaces/IJWTAuthManager.cs",
+                "region": {
+                  "startLine": 2,
+                  "startColumn": 1,
+                  "endLine": 2,
+                  "endColumn": 14
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/JWTAuth/Interfaces/IJWTAuthManager.cs",
+                "region": {
+                  "startLine": 3,
+                  "startColumn": 1,
+                  "endLine": 3,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/JWTAuth/Interfaces/IJWTAuthManager.cs",
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 1,
+                  "endLine": 4,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/JWTAuth/Interfaces/IJWTAuthManager.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 1,
+                  "endLine": 5,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename interface 'IJWTAuthManager' to match pascal case naming rules, consider using 'IJwtAuthManager'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/JWTAuth/Interfaces/IJWTAuthManager.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 22,
+                  "endLine": 9,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/JWTAuth/JWDAuthManager.cs",
+                "region": {
+                  "startLine": 2,
+                  "startColumn": 1,
+                  "endLine": 2,
+                  "endColumn": 18
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/JWTAuth/JWDAuthManager.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 1,
+                  "endLine": 5,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/JWTAuth/JWDAuthManager.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 1,
+                  "endLine": 7,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/JWTAuth/JWDAuthManager.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 1,
+                  "endLine": 9,
+                  "endColumn": 53
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/JWTAuth/JWDAuthManager.cs",
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 1,
+                  "endLine": 11,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/Models/Person.cs",
+                "region": {
+                  "startLine": 3,
+                  "startColumn": 1,
+                  "endLine": 3,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/Models/PurchaseOrder.cs",
                 "region": {
                   "startLine": 1,
                   "startColumn": 1,
@@ -333,7 +564,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/IMS/IMS/Repository/PurchaseOrderRepository.cs",
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/Repository/PurchaseOrderRepository.cs",
                 "region": {
                   "startLine": 5,
                   "startColumn": 1,
@@ -348,18 +579,60 @@
           }
         },
         {
-          "ruleId": "S1118",
+          "ruleId": "S1128",
           "level": "warning",
-          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+          "message": "Remove this unnecessary 'using'.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/IMS/IMS/Program.cs",
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/Startup.cs",
                 "region": {
-                  "startLine": 6,
+                  "startLine": 3,
+                  "startColumn": 1,
+                  "endLine": 3,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'JWDAuthManager' to match pascal case naming rules, consider using 'JwdAuthManager'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/JWTAuth/JWDAuthManager.cs",
+                "region": {
+                  "startLine": 15,
                   "startColumn": 18,
-                  "endLine": 6,
-                  "endColumn": 25
+                  "endLine": 15,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'IMSContext' to match pascal case naming rules, consider using 'ImsContext'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/Models/IMSContext.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 18,
+                  "endLine": 5,
+                  "endColumn": 28
                 }
               }
             }
@@ -375,7 +648,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/IMS/IMS/IMSExceptions/DeliveredOrderCanNotDeleted.cs",
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/IMSExceptions/DeliveredOrderCanNotDeleted.cs",
                 "region": {
                   "startLine": 5,
                   "startColumn": 18,
@@ -388,7 +661,7 @@
           "relatedLocations": [
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/IMS/IMS/IMSExceptions/DeliveredOrderCanNotDeleted.cs",
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/IMSExceptions/DeliveredOrderCanNotDeleted.cs",
                 "region": {
                   "startLine": 5,
                   "startColumn": 12,
@@ -399,7 +672,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/IMS/IMS/IMSExceptions/DeliveredOrderCanNotDeleted.cs",
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/IMSExceptions/DeliveredOrderCanNotDeleted.cs",
                 "region": {
                   "startLine": 5,
                   "startColumn": 12,
@@ -424,7 +697,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/IMS/IMS/IMSExceptions/DeliveredOrderCanNotDeleted.cs",
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/IMSExceptions/DeliveredOrderCanNotDeleted.cs",
                 "region": {
                   "startLine": 5,
                   "startColumn": 18,
@@ -439,18 +712,228 @@
           }
         },
         {
-          "ruleId": "S4823",
+          "ruleId": "S3925",
           "level": "warning",
-          "message": "Make sure that command line arguments are used safely here.",
+          "message": "Update this implementation of 'ISerializable' to conform to the recommended serialization pattern.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/IMS/IMS/Program.cs",
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/IMSExceptions/InvalidDeliveryDate.cs",
                 "region": {
-                  "startLine": 8,
-                  "startColumn": 28,
-                  "endLine": 8,
+                  "startLine": 6,
+                  "startColumn": 18,
+                  "endLine": 6,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/IMSExceptions/InvalidDeliveryDate.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 12,
+                  "endLine": 6,
+                  "endColumn": 17
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/IMSExceptions/InvalidDeliveryDate.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 12,
+                  "endLine": 6,
+                  "endColumn": 17
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": "Add 'System.SerializableAttribute' attribute on 'InvalidDeliveryDate' because it implements 'ISerializable'.",
+              "1": "Add a 'protected' constructor 'InvalidDeliveryDate(SerializationInfo, StreamingContext)'."
+            }
+          }
+        },
+        {
+          "ruleId": "S3376",
+          "level": "warning",
+          "message": "Make this class name end with 'Exception'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/IMSExceptions/InvalidDeliveryDate.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 18,
+                  "endLine": 6,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3925",
+          "level": "warning",
+          "message": "Update this implementation of 'ISerializable' to conform to the recommended serialization pattern.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/IMSExceptions/NoMediumExists.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 18,
+                  "endLine": 5,
                   "endColumn": 32
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/IMSExceptions/NoMediumExists.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 12,
+                  "endLine": 5,
+                  "endColumn": 17
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/IMSExceptions/NoMediumExists.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 12,
+                  "endLine": 5,
+                  "endColumn": 17
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": "Add 'System.SerializableAttribute' attribute on 'NoMediumExists' because it implements 'ISerializable'.",
+              "1": "Add a 'protected' constructor 'NoMediumExists(SerializationInfo, StreamingContext)'."
+            }
+          }
+        },
+        {
+          "ruleId": "S3925",
+          "level": "warning",
+          "message": "Update this implementation of 'ISerializable' to conform to the recommended serialization pattern.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/IMSExceptions/VenoderIdNotFound.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 18,
+                  "endLine": 5,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/IMSExceptions/VenoderIdNotFound.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 12,
+                  "endLine": 5,
+                  "endColumn": 17
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/IMSExceptions/VenoderIdNotFound.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 12,
+                  "endLine": 5,
+                  "endColumn": 17
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": "Add 'System.SerializableAttribute' attribute on 'VenoderIdNotFound' because it implements 'ISerializable'.",
+              "1": "Add a 'protected' constructor 'VenoderIdNotFound(SerializationInfo, StreamingContext)'."
+            }
+          }
+        },
+        {
+          "ruleId": "S3376",
+          "level": "warning",
+          "message": "Make this class name end with 'Exception'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/IMSExceptions/NoMediumExists.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 18,
+                  "endLine": 5,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3376",
+          "level": "warning",
+          "message": "Make this class name end with 'Exception'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/IMSExceptions/VenoderIdNotFound.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 18,
+                  "endLine": 5,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1118",
+          "level": "warning",
+          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/Program.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 18,
+                  "endLine": 6,
+                  "endColumn": 25
                 }
               }
             }
@@ -466,12 +949,117 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/IMS/IMS/Startup.cs",
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/Startup.cs",
                 "region": {
-                  "startLine": 55,
+                  "startLine": 86,
                   "startColumn": 17,
-                  "endLine": 55,
+                  "endLine": 86,
                   "endColumn": 48
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4834",
+          "level": "warning",
+          "message": "Make sure that permissions are controlled safely here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/JWTAuth/JWDAuthManager.cs",
+                "region": {
+                  "startLine": 32,
+                  "startColumn": 27,
+                  "endLine": 35,
+                  "endColumn": 20
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4823",
+          "level": "warning",
+          "message": "Make sure that command line arguments are used safely here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/Program.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 28,
+                  "endLine": 8,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1186",
+          "level": "warning",
+          "message": "Add a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/Migrations/20200616072540_Person.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 33,
+                  "endLine": 12,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1186",
+          "level": "warning",
+          "message": "Add a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/Migrations/20200616070634_User_1.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 33,
+                  "endLine": 12,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1186",
+          "level": "warning",
+          "message": "Add a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ctsdotnetfsd04/source/repos/KrishnaIMS/IMS/Migrations/20200616065432_Fourth_Users.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 33,
+                  "endLine": 12,
+                  "endColumn": 37
                 }
               }
             }
@@ -524,6 +1112,40 @@
           "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1128",
           "properties": {
             "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S1186": {
+          "id": "S1186",
+          "shortDescription": "Methods should not be empty",
+          "fullDescription": "There are several reasons for a method not to have a method body:",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1186",
+          "properties": {
+            "category": "Critical Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S125": {
+          "id": "S125",
+          "shortDescription": "Sections of code should not be commented out",
+          "fullDescription": "Programmers should not comment out code as it bloats programs and reduces readability.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-125",
+          "properties": {
+            "category": "Major Code Smell",
             "isEnabledByDefault": true,
             "tags": [
               "C#",
@@ -589,6 +1211,23 @@
           "fullDescription": "Using command line arguments is security-sensitive. It has led in the past to the following vulnerabilities:",
           "defaultLevel": "warning",
           "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-4823",
+          "properties": {
+            "category": "Critical Security Hotspot",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "NotConfigurable"
+            ]
+          }
+        },
+        "S4834": {
+          "id": "S4834",
+          "shortDescription": "Controlling permissions is security-sensitive",
+          "fullDescription": "Controlling permissions is security-sensitive. It has led in the past to the following vulnerabilities:",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-4834",
           "properties": {
             "category": "Critical Security Hotspot",
             "isEnabledByDefault": true,

@@ -331,3 +331,6 @@ C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\obj\Release\netcoreapp3.1\st
 C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\obj\Release\netcoreapp3.1\IMS.dll
 C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\obj\Release\netcoreapp3.1\IMS.pdb
 C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\obj\Release\netcoreapp3.1\IMS.genruntimeconfig.cache
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Release\netcoreapp3.1\System.Net.Http.Formatting.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Release\netcoreapp3.1\System.Web.Http.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Release\netcoreapp3.1\Swashbuckle.Core.dll

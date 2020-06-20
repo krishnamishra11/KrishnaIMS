@@ -1,5 +1,6 @@
 using IMS.BusinessLayer;
 using IMS.BusinessLayer.Interfaces;
+using IMS.Filters;
 using IMS.JWTAuth;
 using IMS.JWTAuth.Interfaces;
 using IMS.Models;
@@ -15,6 +16,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
@@ -48,8 +50,9 @@ namespace IMS
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "IMS API", Version = "v1" });
+                c.SwaggerDoc("v2", new OpenApiInfo { Title = "IMS API", Version = "v2" });
                 c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
+                //c.DocumentFilter<MyDocumentFilter>();
             });
             string key = "something from amitab and something from Dharmendra and finnlay something from mithun chkroberti if you like something from venod mehara also";
             services.AddAuthentication(
@@ -85,13 +88,19 @@ namespace IMS
 
             app.UseHttpsRedirection();
 
-            app.UseSwagger();
+            app.UseSwagger(c =>
+            {
+                c.PreSerializeFilters.Add((swagger, httpReq) =>
+                {
+                    swagger.Servers = new List<OpenApiServer> { new OpenApiServer { Url = $"{httpReq.Scheme}://{httpReq.Host.Value}" } };
+                });
+            });
 
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "IMS API");
             });
-
+         
             app.UseRouting();
 
             app.UseAuthentication();
