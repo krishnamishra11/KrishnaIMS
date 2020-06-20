@@ -12,7 +12,8 @@
           "Microsoft.NET.Test.Sdk": "16.4.0",
           "Moq": "4.14.1",
           "NUnit": "3.12.0",
-          "NUnit3TestAdapter": "3.16.1"
+          "NUnit3TestAdapter": "3.16.1",
+          "coverlet.msbuild": "2.9.0"
         },
         "runtime": {
           "MSI.UnitTest.dll": {}
@@ -38,6 +39,7 @@
           }
         }
       },
+      "coverlet.msbuild/2.9.0": {},
       "Microsoft.AspNet.WebApi.Client/4.0.20710": {
         "dependencies": {
           "Microsoft.Net.Http": "2.0.20710",
@@ -2416,6 +2418,13 @@
       "sha512": "sha512-b5rRL5zeaau1y/5hIbI+6mGw3cwun16YjkHZnV9RRT5UyUIFsgLmNXJ0YnIN9p8Hw7K7AbG1q1UclQVU3DinAQ==",
       "path": "castle.core/4.4.0",
       "hashPath": "castle.core.4.4.0.nupkg.sha512"
+    },
+    "coverlet.msbuild/2.9.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-t+2du2q+z0FFklyP6HGSoKssRj0NequInLvgQ9rtxHskbgmAENxgt83eTQSRyxJ8DAThW8WOYhOuhuXIs//ZyA==",
+      "path": "coverlet.msbuild/2.9.0",
+      "hashPath": "coverlet.msbuild.2.9.0.nupkg.sha512"
     },
     "Microsoft.AspNet.WebApi.Client/4.0.20710": {
       "type": "package",

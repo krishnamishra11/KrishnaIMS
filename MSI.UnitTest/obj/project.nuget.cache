@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "bMl6UZX8iRzXPb58PCoP1I48hpJ+mPl4JsdKubRCFQhA4TwAXcY4nbDC7P8oWBsA56WBLieYC7L7/HN+OrHbJA==",
+  "dgSpecHash": "d+0cHuYhcuYlvhslTlMZG4PLweXYrfI7OAed5h7oxpLBylfSZpQVtCWUNp9v9q/35F44m5tvvI7mck6U5yCtRg==",
   "success": true,
   "projectFilePath": "C:\\Users\\ctsdotnetfsd04\\source\\repos\\KrishnaIMS\\MSI.UnitTest\\MSI.UnitTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ctsdotnetfsd04\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
+    "C:\\Users\\ctsdotnetfsd04\\.nuget\\packages\\coverlet.msbuild\\2.9.0\\coverlet.msbuild.2.9.0.nupkg.sha512",
     "C:\\Users\\ctsdotnetfsd04\\.nuget\\packages\\microsoft.aspnet.webapi.client\\4.0.20710\\microsoft.aspnet.webapi.client.4.0.20710.nupkg.sha512",
     "C:\\Users\\ctsdotnetfsd04\\.nuget\\packages\\microsoft.aspnet.webapi.core\\4.0.20710\\microsoft.aspnet.webapi.core.4.0.20710.nupkg.sha512",
     "C:\\Users\\ctsdotnetfsd04\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
