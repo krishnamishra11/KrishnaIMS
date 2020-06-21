@@ -15,8 +15,8 @@ namespace IMS.Controllers
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
-    [ApiExplorerSettings(IgnoreApi = true)]
-    //hi
+    //[ApiExplorerSettings(IgnoreApi = true)]
+    
     public class PurchaseOrdersController : ControllerBase
     {
         private readonly IBLPurchaseOrder  _bLPurchaseOrder;

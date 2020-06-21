@@ -15,7 +15,7 @@ namespace IMS.Controllers
 {   
     [Authorize]
     [ApiExplorerSettings(IgnoreApi = true)]
-    [Route("api/[controller]")]
+    //[Route("api/[controller]")]
     [ApiController]
     public class AuthController : ControllerBase
     {
