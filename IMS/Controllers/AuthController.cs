@@ -14,8 +14,8 @@ using Newtonsoft.Json;
 namespace IMS.Controllers
 {   
     [Authorize]
-    [ApiExplorerSettings(IgnoreApi = true)]
-    //[Route("api/[controller]")]
+    //[ApiExplorerSettings(IgnoreApi = true)]
+    [Route("api/[controller]")]
     [ApiController]
     public class AuthController : ControllerBase
     {
@@ -32,10 +32,10 @@ namespace IMS.Controllers
         [HttpGet]
         public IActionResult GetPerson()
         {
-            return Ok( _context.Person.Select(q => new {q.Id, q.Name}).ToList());
+            return Ok(_context.Person.Select(q => new { q.Id, q.Name }).ToList());
         }
 
-        
+
         [HttpGet("{id}")]
         public async Task<ActionResult<Person>> GetPerson(int id)
         {
