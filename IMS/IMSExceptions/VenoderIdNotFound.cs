@@ -1,9 +1,9 @@
 ﻿using System;
-using System.Runtime.Serialization;
 
 namespace IMS.IMSExceptions
 {
-    public class VenoderIdNotFound:Exception, ISerializable
+    [Serializable]
+    public class VenoderIdNotFound:Exception
     {
         public override string Message => "Venoder id not found";
     }
