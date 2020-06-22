@@ -54,13 +54,13 @@ namespace IMSRepository.Repository
             string key = Constants.RedisCasheGetVendors;
             try
             {
-                if (String.IsNullOrEmpty(_distributedCache.GetString(key)))
+                if (string.IsNullOrEmpty(_distributedCache.GetString(key)))
                 {
-                    vendors = (List<Vendor>)_context.Vendors.ToList();
+                    vendors = _context.Vendors.ToList();
 
                     var options = new DistributedCacheEntryOptions();
                     options.SetSlidingExpiration(TimeSpan.FromMinutes(Constants.RedisCasheExpiry));
-                    _distributedCache.SetString(key, System.Text.Json.JsonSerializer.Serialize<List<Vendor>>(vendors), options);
+                    _distributedCache.SetString(key, System.Text.Json.JsonSerializer.Serialize(vendors), options);
                 }
                 else
                 {
@@ -69,7 +69,7 @@ namespace IMSRepository.Repository
             }
             catch (StackExchange.Redis.RedisConnectionException)
             {
-                vendors = (List<Vendor>)_context.Vendors.ToList();
+                vendors = _context.Vendors.ToList();
             }
             return vendors;
         }

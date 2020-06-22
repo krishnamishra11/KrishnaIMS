@@ -18,7 +18,7 @@ namespace IMS.BusinessLayer
         {
             
             if (InvalidDeliveryDate(purchaseOrder))
-                throw new InvalidDeliveryDate();
+                throw new InvalidDeliveryDateException();
 
             _repository.Add(purchaseOrder);
         }
@@ -26,7 +26,7 @@ namespace IMS.BusinessLayer
         public void Edit(PurchaseOrder purchaseOrder)
         {
             if (InvalidDeliveryDate(purchaseOrder))
-                throw new InvalidDeliveryDate();
+                throw new InvalidDeliveryDateException();
 
             _repository.Edit(purchaseOrder);
         }
@@ -51,7 +51,7 @@ namespace IMS.BusinessLayer
             var purchaseOrder = _repository.FindById(Id);
 
             if (purchaseOrder.OrderStatus == OrderStatus.Received)
-                throw new DeliveredOrderCanNotDeleted();
+                throw new DeliveredOrderCanNotDeletedException();
 
             _repository.Remove(Id);
         }

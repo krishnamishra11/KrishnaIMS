@@ -93,7 +93,7 @@ namespace IMSRepository.Repository
 
                     var options = new DistributedCacheEntryOptions();
                     options.SetSlidingExpiration(TimeSpan.FromMinutes(Constants.RedisCasheExpiry));
-                    _distributedCache.SetString(key, System.Text.Json.JsonSerializer.Serialize<List<PurchaseOrder>>(purchaseOrders), options);
+                    _distributedCache.SetString(key, System.Text.Json.JsonSerializer.Serialize(purchaseOrders), options);
                 }
                 else
                 {

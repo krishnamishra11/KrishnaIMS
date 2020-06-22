@@ -20,7 +20,7 @@ namespace IMS.BusinessLayer
         {
             if (!IsCommunicationExists(vendor))
             {
-                throw new NoMediumExists();
+                throw new NoMediumExistsException();
             }
             
             _repository.Add(vendor);
@@ -32,7 +32,7 @@ namespace IMS.BusinessLayer
        
             if (!IsCommunicationExists(vendor))
             {
-                throw new NoMediumExists();
+                throw new NoMediumExistsException();
             }
 
             _repository.Edit(vendor);
