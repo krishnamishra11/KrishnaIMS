@@ -41,13 +41,6 @@ namespace IMS.Controllers
             
         }
 
-        //[HttpGet("{name:alpha}")]
-        //public ActionResult GetPurchaseOrdersByVendorName(string name)
-        //{
-        //    var po = _bLPurchaseOrder.FindByVendorName(name);
-        //    return Ok(po);
-        //}
-
 
         [HttpGet("{id:int}")]
         public ActionResult<PurchaseOrder> GetPurchaseOrder(int id)

@@ -1,8 +1,8 @@
 ﻿using IMS.BusinessLayer.Interfaces;
 using IMS.IMSExceptions;
 using IMSRepository.Models;
-using System.Collections;
 using IMSRepository.Models.Interfaces;
+using System.Collections;
 
 namespace IMS.BusinessLayer
 {

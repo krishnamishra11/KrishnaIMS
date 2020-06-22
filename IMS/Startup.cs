@@ -4,6 +4,7 @@ using IMS.JWTAuth;
 using IMS.JWTAuth.Interfaces;
 using IMSRepository.Models;
 using IMSRepository.Models.Interfaces;
+using IMSRepository.Modules;
 using IMSRepository.Repository;
 using IMSRepository.Repository.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -13,10 +14,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,7 +25,6 @@ namespace IMS
     public class Startup
     {
         
-
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -38,7 +36,6 @@ namespace IMS
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            
 
             services.AddDbContext<IMSContext>(opts => opts.UseSqlServer(Configuration["ConnectionString:IMSDB"]));
             services.AddControllers();
@@ -48,7 +45,6 @@ namespace IMS
             services.AddScoped<IPurchaseOrderRepository, PurchaseOrderRepository>();
             services.AddStackExchangeRedisCache(options =>
             {
-                //options.Configuration = "localhost:6379";
                 options.Configuration = Configuration["ConnectionString:REDIS"] ;
                 options.InstanceName = "IMSInstance";
 
@@ -58,7 +54,6 @@ namespace IMS
             {
                 c.SwaggerDoc("v2", new OpenApiInfo { Title = "IMS API", Version = "v2" });
                 c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
-                //c.DocumentFilter<MyDocumentFilter>();
             });
             string key = Constants.JwtKey;
             services.AddAuthentication(

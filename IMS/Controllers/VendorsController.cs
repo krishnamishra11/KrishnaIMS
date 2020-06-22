@@ -13,7 +13,7 @@ namespace IMS.Controllers
     public class VendorsController : ControllerBase
     {
         private readonly IBLVendor _blVendor;
-        private ILogger _logger;
+        private readonly ILogger _logger;
 
 
         public VendorsController(IBLVendor blVendor,ILogger<VendorsController> logger)
@@ -63,18 +63,7 @@ namespace IMS.Controllers
 
         }
 
-        //[HttpGet("{id:alpha}")]
-        ////[Route("VendorByName")]
-        //public ActionResult<IEnumerable<Vendor>> GetVendorByName(string id)
-        //{
-        //    var vendors = _blVendor.FindByName(id);
 
-        //    if (vendors == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    return Ok(vendors);
-        //}
         [HttpPut("{id}")]
         public IActionResult PutVendor(Vendor vendor)
         {

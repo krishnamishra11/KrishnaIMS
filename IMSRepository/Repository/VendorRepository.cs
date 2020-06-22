@@ -1,8 +1,8 @@
 ﻿using IMSRepository.Models;
+using IMSRepository.Modules;
 using IMSRepository.Repository.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Distributed;
-using Microsoft.Extensions.Caching.StackExchangeRedis;
 using System;
 using System.Collections.Generic;
 using System.Linq;
