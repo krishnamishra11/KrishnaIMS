@@ -22,7 +22,8 @@ steps:
     scannerMode: 'MSBuild'
     projectKey: 'IMS'
     projectName: 'IMS'
-   # extraProperties: |
+    extraProperties: |
+      sonar.coverage.jacoco.xmlReportPaths=$(Build.SourcesDirectory)/**/coverage.opencover.xml
     #  sonar.exclusions=**/obj/**,**/*.dll
      # sonar.cs.opencover.reportsPaths=$(Build.SourcesDirectory)/**/coverage.opencover.xml
      # sonar.cs.vstest.reportsPaths=$(Agent.TempDirectory)/*.trx
