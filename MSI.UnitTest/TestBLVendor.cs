@@ -35,9 +35,9 @@ namespace MSI.UnitTest
         {
             var v = new Vendor() { Email=email,Mobile = mobile, Fax= fax };
 
-            var ex = Assert.Throws<NoMediumExists>(() => _bLVendor.Add(v));
+            var ex = Assert.Throws<NoMediumExistsException>(() => _bLVendor.Add(v));
 
-            Assert.AreEqual(ex.GetType(), typeof(NoMediumExists));
+            Assert.AreEqual(ex.GetType(), typeof(NoMediumExistsException));
         }
 
         [Test]
@@ -57,9 +57,9 @@ namespace MSI.UnitTest
         {
             var v = new Vendor() { Email = email, Mobile = mobile, Fax = fax };
 
-            var ex = Assert.Throws<NoMediumExists>(() => _bLVendor.Edit(v));
+            var ex = Assert.Throws<NoMediumExistsException>(() => _bLVendor.Edit(v));
 
-            Assert.AreEqual(ex.GetType(), typeof(NoMediumExists));
+            Assert.AreEqual(ex.GetType(), typeof(NoMediumExistsException));
         }
         [Test]
         public void DeleteVerified()

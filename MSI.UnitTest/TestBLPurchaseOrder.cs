@@ -34,9 +34,9 @@ namespace MSI.UnitTest
         {
             var po = new PurchaseOrder() { OrderDate=DateTime.Now,DeliveryDate=DateTime.Now.AddDays(-1) };
 
-            var ex= Assert.Throws<InvalidDeliveryDate>(() => _bLPurchaseOrder.Add(po));
+            var ex= Assert.Throws<InvalidDeliveryDateException>(() => _bLPurchaseOrder.Add(po));
 
-            Assert.AreEqual(ex.GetType(), typeof(InvalidDeliveryDate));
+            Assert.AreEqual(ex.GetType(), typeof(InvalidDeliveryDateException));
         }
 
         [Test]
@@ -53,9 +53,9 @@ namespace MSI.UnitTest
         {
             var po = new PurchaseOrder() { OrderDate = DateTime.Now, DeliveryDate = DateTime.Now.AddDays(-1) };
 
-            var ex = Assert.Throws<InvalidDeliveryDate>(() => _bLPurchaseOrder.Edit(po));
+            var ex = Assert.Throws<InvalidDeliveryDateException>(() => _bLPurchaseOrder.Edit(po));
 
-            Assert.AreEqual(ex.GetType(), typeof(InvalidDeliveryDate));
+            Assert.AreEqual(ex.GetType(), typeof(InvalidDeliveryDateException));
         }
         [Test]
         public void DeleteVerified()
@@ -77,9 +77,9 @@ namespace MSI.UnitTest
             var po = new PurchaseOrder() { Id=id, OrderStatus= OrderStatus.Received };
 
             _purchaseOrderRepository.Setup(q => q.FindById(id)).Returns(po);
-            var ex = Assert.Throws<DeliveredOrderCanNotDeleted>(() => _bLPurchaseOrder.Remove(id));
+            var ex = Assert.Throws<DeliveredOrderCanNotDeletedException>(() => _bLPurchaseOrder.Remove(id));
 
-            Assert.AreEqual(ex.GetType(), typeof(DeliveredOrderCanNotDeleted));
+            Assert.AreEqual(ex.GetType(), typeof(DeliveredOrderCanNotDeletedException));
         }
         [Test]
         public void FindByIdVerified()
