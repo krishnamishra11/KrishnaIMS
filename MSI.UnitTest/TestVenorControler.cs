@@ -1,12 +1,10 @@
 ﻿using IMS.BusinessLayer.Interfaces;
 using IMS.Controllers;
-using IMS.Models;
+using IMSRepository.Models;
 using Microsoft.Extensions.Caching.Distributed;
+using Microsoft.Extensions.Logging;
 using Moq;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace MSI.UnitTest
 {
@@ -14,14 +12,14 @@ namespace MSI.UnitTest
     public class TestVenorControler
     {
         Mock<IBLVendor> _blVendor;
-        Mock<IDistributedCache> _distributedCache;
+        Mock<ILogger<VendorsController>> _logger;
         VendorsController vendorsController; 
         [SetUp]
         public void SetUp()
         {
              _blVendor = new Mock<IBLVendor>();
-             _distributedCache = new Mock<IDistributedCache>();
-            vendorsController = new VendorsController(_blVendor.Object, _distributedCache.Object);
+            _logger = new Mock<ILogger<VendorsController>>();
+           vendorsController = new VendorsController(_blVendor.Object, _logger.Object);
 
         }
         [Test]

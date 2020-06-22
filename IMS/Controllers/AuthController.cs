@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using IMS.JWTAuth.Interfaces;
+using IMSRepository.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using IMS.Models;
-using IMS.JWTAuth.Interfaces;
-using Microsoft.EntityFrameworkCore.Query.Internal;
-using Microsoft.AspNetCore.Authorization;
-using Newtonsoft.Json;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace IMS.Controllers
-{   
+{
     [Authorize]
     //[ApiExplorerSettings(IgnoreApi = true)]
     [Route("api/[controller]")]

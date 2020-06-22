@@ -334,3 +334,14 @@ C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\obj\Release\netcoreapp3.1\IM
 C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Release\netcoreapp3.1\System.Net.Http.Formatting.dll
 C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Release\netcoreapp3.1\System.Web.Http.dll
 C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Release\netcoreapp3.1\Swashbuckle.Core.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Release\netcoreapp3.1\IMSRepository.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Release\netcoreapp3.1\IMSRepository.pdb
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Release\netcoreapp3.1\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Release\netcoreapp3.1\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Release\netcoreapp3.1\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Release\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Release\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Release\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Release\netcoreapp3.1\Microsoft.Extensions.Logging.AzureAppServices.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Release\netcoreapp3.1\Microsoft.Extensions.Logging.Configuration.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Release\netcoreapp3.1\Microsoft.Extensions.Options.ConfigurationExtensions.dll

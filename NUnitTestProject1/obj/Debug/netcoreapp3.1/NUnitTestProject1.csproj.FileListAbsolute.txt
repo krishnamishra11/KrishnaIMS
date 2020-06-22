@@ -1,0 +1,13 @@
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\NUnitTestProject1\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\NUnitTestProject1\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.pdb
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\NUnitTestProject1\bin\Debug\netcoreapp3.1\nunit.engine.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\NUnitTestProject1\bin\Debug\netcoreapp3.1\nunit.engine.api.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\NUnitTestProject1\bin\Debug\netcoreapp3.1\NUnitTestProject1.deps.json
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\NUnitTestProject1\bin\Debug\netcoreapp3.1\NUnitTestProject1.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\NUnitTestProject1\bin\Debug\netcoreapp3.1\NUnitTestProject1.pdb
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\NUnitTestProject1\obj\Debug\netcoreapp3.1\NUnitTestProject1.csprojAssemblyReference.cache
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\NUnitTestProject1\obj\Debug\netcoreapp3.1\NUnitTestProject1.AssemblyInfoInputs.cache
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\NUnitTestProject1\obj\Debug\netcoreapp3.1\NUnitTestProject1.AssemblyInfo.cs
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\NUnitTestProject1\obj\Debug\netcoreapp3.1\NUnitTestProject1.csproj.CoreCompileInputs.cache
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\NUnitTestProject1\obj\Debug\netcoreapp3.1\NUnitTestProject1.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\NUnitTestProject1\obj\Debug\netcoreapp3.1\NUnitTestProject1.pdb

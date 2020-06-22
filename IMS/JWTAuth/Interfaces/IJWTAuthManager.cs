@@ -1,4 +1,4 @@
-﻿using IMS.Models;
+﻿using IMSRepository.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

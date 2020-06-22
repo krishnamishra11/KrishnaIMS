@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IMS", "IMS\IMS.csproj", "{A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSI.UnitTest", "MSI.UnitTest\MSI.UnitTest.csproj", "{5B7C2832-763E-40D3-9B6E-E45D79686AEF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{BC122986-ADC9-4B50-81F3-518B2BCF2F68}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMSRepository", "IMSRepository\IMSRepository.csproj", "{7025D29C-F268-4CFC-BB61-16B8613A9336}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{5B7C2832-763E-40D3-9B6E-E45D79686AEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B7C2832-763E-40D3-9B6E-E45D79686AEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B7C2832-763E-40D3-9B6E-E45D79686AEF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BC122986-ADC9-4B50-81F3-518B2BCF2F68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BC122986-ADC9-4B50-81F3-518B2BCF2F68}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BC122986-ADC9-4B50-81F3-518B2BCF2F68}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BC122986-ADC9-4B50-81F3-518B2BCF2F68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7025D29C-F268-4CFC-BB61-16B8613A9336}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7025D29C-F268-4CFC-BB61-16B8613A9336}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7025D29C-F268-4CFC-BB61-16B8613A9336}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7025D29C-F268-4CFC-BB61-16B8613A9336}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

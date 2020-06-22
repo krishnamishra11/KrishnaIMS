@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\IMSRepository\IMSRepository.csproj" />
     <ProjectReference Include="..\IMS\IMS.csproj" />
   </ItemGroup>
 

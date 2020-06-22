@@ -1,0 +1,9 @@
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMSRepository\bin\Release\netcoreapp3.1\IMSRepository.deps.json
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMSRepository\bin\Release\netcoreapp3.1\IMSRepository.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMSRepository\bin\Release\netcoreapp3.1\IMSRepository.pdb
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMSRepository\obj\Release\netcoreapp3.1\IMSRepository.csprojAssemblyReference.cache
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMSRepository\obj\Release\netcoreapp3.1\IMSRepository.AssemblyInfoInputs.cache
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMSRepository\obj\Release\netcoreapp3.1\IMSRepository.AssemblyInfo.cs
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMSRepository\obj\Release\netcoreapp3.1\IMSRepository.csproj.CoreCompileInputs.cache
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMSRepository\obj\Release\netcoreapp3.1\IMSRepository.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMSRepository\obj\Release\netcoreapp3.1\IMSRepository.pdb

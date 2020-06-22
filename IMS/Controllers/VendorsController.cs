@@ -1,12 +1,9 @@
 ﻿using IMS.BusinessLayer.Interfaces;
-using IMS.Models;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
+using IMSRepository.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Caching.Distributed;
+using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
 
 namespace IMS.Controllers
 {
@@ -16,56 +13,54 @@ namespace IMS.Controllers
     public class VendorsController : ControllerBase
     {
         private readonly IBLVendor _blVendor;
-        private readonly IDistributedCache _distributedCache;
-        
-        public VendorsController(IBLVendor blVendor, IDistributedCache distributedCache)
+        private ILogger _logger;
+
+
+        public VendorsController(IBLVendor blVendor,ILogger<VendorsController> logger)
         {
             _blVendor = blVendor;
-            _distributedCache = distributedCache;
+            _logger = logger;
         }
         /// <summary>
         /// GetVeondors has Redis Cache implemented
         /// </summary>
         /// <returns></returns>
      [HttpGet]
-        public  ActionResult GetVendors()
+        public IActionResult GetVendors()
         {
-            List<Vendor> v;
-            string key = "GetVendors";
             try
             {
-                if (String.IsNullOrEmpty(_distributedCache.GetString(key)))
-                {
-                    v = (List<Vendor>)_blVendor.GetVendors();
-
-                    var options = new DistributedCacheEntryOptions();
-                    options.SetSlidingExpiration(TimeSpan.FromMinutes(1));
-                    _distributedCache.SetString(key, System.Text.Json.JsonSerializer.Serialize<List<Vendor>>(v), options);
-                }
-                else
-                {
-                    v = System.Text.Json.JsonSerializer.Deserialize<List<Vendor>>(_distributedCache.GetString(key));
-                }
+                _logger.LogInformation("GetVendor Started " );
+                return Ok(_blVendor.GetVendors());
             }
-            catch (StackExchange.Redis.RedisConnectionException)
+            catch (Exception ex)
             {
-                v = (List<Vendor>)_blVendor.GetVendors();
+                _logger.LogError("GetVendor Error",ex);
+                return BadRequest(ex.Message);
             }
-            return Ok(v);
-            
+
         }
 
 
         [HttpGet("{id:int}")]
         public ActionResult<Vendor> GetVendor(int id)
         {
-            var vendor = _blVendor.FindById(id);
-
-            if (vendor == null)
+            try
             {
-                return NotFound();
+                _logger.LogInformation("GetVendor Started " + id.ToString());
+                var vendor = _blVendor.FindById(id);
+
+                if (vendor == null)
+                {
+                    return NotFound();
+                }
+                return vendor;
+            }catch(Exception ex)
+            {
+                _logger.LogError("GetVendor Error"+id.ToString(),ex);
+                return BadRequest(ex.Message);
             }
-            return vendor;
+
         }
 
         //[HttpGet("{id:alpha}")]
@@ -81,21 +76,28 @@ namespace IMS.Controllers
         //    return Ok(vendors);
         //}
         [HttpPut("{id}")]
-        public IActionResult PutVendor(int id, Vendor vendor)
+        public IActionResult PutVendor(Vendor vendor)
         {
-            if (id != vendor.Id)
-            {
-                return BadRequest();
-            }
 
             try
             {
+                _logger.LogInformation("PutVendor Started " + vendor.Id.ToString());
+
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest();
+                }
+
                 _blVendor.Edit(vendor);
             }
-            catch (DbUpdateConcurrencyException)
+            catch (DbUpdateConcurrencyException ex)
             {
-                if (_blVendor.FindById (id)==null)
+                _logger.LogError("PutVendor Error" + vendor.Id.ToString(), ex);
+
+                if (_blVendor.FindById (vendor.Id)==null)
                 {
+                    _logger.LogError("PutVendor Error :Id not found " + vendor.Id.ToString());
+
                     return NotFound();
                 }
                 else
@@ -104,6 +106,7 @@ namespace IMS.Controllers
                 }
             }catch(Exception ex)
             {
+                _logger.LogError("PutVendor Error" + vendor.Id.ToString(), ex);
                 return BadRequest(ex.Message);
             }
 
@@ -116,11 +119,20 @@ namespace IMS.Controllers
         {
             try
             {
+                _logger.LogInformation("PostVendor Started " + vendor.Id.ToString());
+
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest();
+                }
+
                 _blVendor.Add(vendor);
 
-                return CreatedAtAction("GetVendor", new { id = vendor.Id }, vendor);
+                return CreatedAtAction("PostVendor", new { id = vendor.Id }, vendor);
             }catch(Exception ex)
             {
+                _logger.LogError("PostVendor Error" + vendor.Id.ToString(), ex);
+
                 return BadRequest(ex.Message);
             }
         }
@@ -131,18 +143,23 @@ namespace IMS.Controllers
         {
             try
             {
+                _logger.LogInformation("DeleteVendor Started " + id.ToString());
                 var vendor = _blVendor.FindById(id);
                 if (vendor == null)
                 {
+                    _logger.LogError("DeleteVendor Error :Id not found " + id.ToString());
+
                     return NotFound();
                 }
 
 
                 _blVendor.Remove(id);
-
+                
                 return vendor;
             }catch(Exception ex)
             {
+                _logger.LogError("DeleteVendor Error" + id.ToString(), ex);
+
                 return BadRequest(ex.Message);
             }
         }

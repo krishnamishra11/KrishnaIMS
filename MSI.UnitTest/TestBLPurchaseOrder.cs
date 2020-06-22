@@ -1,7 +1,7 @@
 using IMS.BusinessLayer;
 using IMS.IMSExceptions;
-using IMS.Models;
-using IMS.Models.Interfaces;
+using IMSRepository.Models;
+using IMSRepository.Models.Interfaces;
 using Moq;
 using NUnit.Framework;
 using System;

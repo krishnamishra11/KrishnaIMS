@@ -1,14 +1,10 @@
 ﻿using IMS.BusinessLayer.Interfaces;
-using IMS.Models;
+using IMSRepository.Models;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Caching.Distributed;
+using Microsoft.Extensions.Logging;
 using System;
-using System.Text;
-using System.Collections.Generic;
-
 
 namespace IMS.Controllers
 {
@@ -20,40 +16,29 @@ namespace IMS.Controllers
     public class PurchaseOrdersController : ControllerBase
     {
         private readonly IBLPurchaseOrder  _bLPurchaseOrder;
-        private readonly IDistributedCache _distributedCache;
+        private readonly ILogger _logger;
 
-        public PurchaseOrdersController(IBLPurchaseOrder bLPurchaseOrder, IDistributedCache distributedCache )
+        public PurchaseOrdersController(IBLPurchaseOrder bLPurchaseOrder, ILogger<PurchaseOrder> logger)
         {
             _bLPurchaseOrder = bLPurchaseOrder;
-            _distributedCache = distributedCache;
+            _logger = logger;
         }
 
         
         [HttpGet]
         public  ActionResult GetPurchaseOrders()
         {
-            List<PurchaseOrder> po;
-            string key = "GetPurchaseOrders";
             try
             {
-                if (String.IsNullOrEmpty(_distributedCache.GetString(key)))
-                {
-                    po =(List<PurchaseOrder>)_bLPurchaseOrder.GetPurchaseOrders();
-
-                    var options = new DistributedCacheEntryOptions();
-                    options.SetSlidingExpiration(TimeSpan.FromMinutes(1));
-                    _distributedCache.SetString(key, System.Text.Json.JsonSerializer.Serialize<List<PurchaseOrder>>(po), options);
-                }
-                else
-                {
-                    po = System.Text.Json.JsonSerializer.Deserialize<List<PurchaseOrder>>(_distributedCache.GetString(key));
-                }
+                _logger.LogInformation("GetPurchaseOrders Started ");
+                return Ok(_bLPurchaseOrder.GetPurchaseOrders());
             }
-            catch(StackExchange.Redis.RedisConnectionException )
+            catch (Exception ex)
             {
-                po = (List<PurchaseOrder>)_bLPurchaseOrder.GetPurchaseOrders();
+                _logger.LogError("GetPurchaseOrders Error", ex);
+                return BadRequest(ex.Message);
             }
-            return Ok(po);
+            
         }
 
         //[HttpGet("{name:alpha}")]
@@ -67,33 +52,46 @@ namespace IMS.Controllers
         [HttpGet("{id:int}")]
         public ActionResult<PurchaseOrder> GetPurchaseOrder(int id)
         {
-            var purchaseOrder = _bLPurchaseOrder.FindById(id);
 
-            if (purchaseOrder == null)
+            try
             {
-                return NotFound();
-            }
+                _logger.LogInformation("GetPurchaseOrders Started " +id.ToString());
+                var purchaseOrder = _bLPurchaseOrder.FindById(id);
 
-            return purchaseOrder;
+                if (purchaseOrder == null)
+                {
+                    return NotFound();
+                }
+
+                return purchaseOrder;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("GetPurchaseOrders Error" + id.ToString(), ex);
+                return BadRequest(ex.Message);
+            }
         }
 
 
         [HttpPut("{id}")]
-        public  IActionResult PutPurchaseOrder(int id, PurchaseOrder purchaseOrder)
+        public  IActionResult PutPurchaseOrder(PurchaseOrder purchaseOrder)
         {
-            if (id != purchaseOrder.Id)
-            {
-                return BadRequest();
-            }
-
             try
             {
-                
+                _logger.LogInformation("PutPurchaseOrder Started " + purchaseOrder.Id.ToString());
+
+                if(!ModelState.IsValid)
+                {
+                    return BadRequest();
+                }
+
                 _bLPurchaseOrder.Edit(purchaseOrder);
             }
-            catch (DbUpdateConcurrencyException)
+            catch (DbUpdateConcurrencyException ex)
             {
-                if (_bLPurchaseOrder.FindById(id)==null)
+                _logger.LogError("PutPurchaseOrder Error" + purchaseOrder.Id.ToString(), ex);
+
+                if (_bLPurchaseOrder.FindById(purchaseOrder.Id) ==null)
                 {
                     return NotFound();
                 }
@@ -103,6 +101,7 @@ namespace IMS.Controllers
                 }
             }catch(Exception ex)
             {
+                _logger.LogError("PutPurchaseOrder Error" + purchaseOrder.Id.ToString(), ex);
                 return BadRequest(ex.Message);
             }
 
@@ -112,13 +111,21 @@ namespace IMS.Controllers
         [HttpPost]
         public  ActionResult<PurchaseOrder> PostPurchaseOrder(PurchaseOrder purchaseOrder)
         {
-            try { 
-                _bLPurchaseOrder.Add(purchaseOrder);
+            try {
+                    _logger.LogInformation("PostPurchaseOrder Started " + purchaseOrder.Id.ToString());
 
-                return CreatedAtAction("GetPurchaseOrder", new { id = purchaseOrder.Id }, purchaseOrder);
+                    if (!ModelState.IsValid)
+                    {
+                        return BadRequest();
+                    }
+                    
+                   _bLPurchaseOrder.Add(purchaseOrder);
+
+                return CreatedAtAction("PostPurchaseOrder", new { id = purchaseOrder.Id }, purchaseOrder);
             }
             catch (Exception ex)
             {
+                _logger.LogError("PostPurchaseOrder Error" + purchaseOrder.Id.ToString(), ex);
                 return BadRequest(ex.Message);
             }
 
@@ -130,6 +137,8 @@ namespace IMS.Controllers
         {
             try
             {
+                _logger.LogInformation("DeletePurchaseOrder Started " + id.ToString());
+
                 var purchaseOrder = _bLPurchaseOrder.FindById(id);
                 if (purchaseOrder == null)
                 {
@@ -141,6 +150,7 @@ namespace IMS.Controllers
                 return purchaseOrder;
             }catch(Exception ex)
             {
+                _logger.LogError("DeletePurchaseOrder Error" + id.ToString(), ex);
                 return BadRequest(ex.Message);
             }
         }

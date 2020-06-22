@@ -1,12 +1,11 @@
 using IMS.BusinessLayer;
 using IMS.BusinessLayer.Interfaces;
-using IMS.Filters;
 using IMS.JWTAuth;
 using IMS.JWTAuth.Interfaces;
-using IMS.Models;
-using IMS.Models.Interfaces;
-using IMS.Repository;
-using IMS.Repository.Interfaces;
+using IMSRepository.Models;
+using IMSRepository.Models.Interfaces;
+using IMSRepository.Repository;
+using IMSRepository.Repository.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -14,8 +13,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,9 +25,12 @@ namespace IMS
 {
     public class Startup
     {
+        
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+        
         }
 
         public IConfiguration Configuration { get; }
@@ -34,6 +38,8 @@ namespace IMS
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            
+
             services.AddDbContext<IMSContext>(opts => opts.UseSqlServer(Configuration["ConnectionString:IMSDB"]));
             services.AddControllers();
             services.AddScoped<IBLVendor, BLVendor>();
@@ -54,7 +60,7 @@ namespace IMS
                 c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
                 //c.DocumentFilter<MyDocumentFilter>();
             });
-            string key = "something from amitab and something from Dharmendra and finnlay something from mithun chkroberti if you like something from venod mehara also";
+            string key = Constants.JwtKey;
             services.AddAuthentication(
                 x =>
                 {
@@ -81,6 +87,8 @@ namespace IMS
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -98,9 +106,9 @@ namespace IMS
 
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "IMS API");
+                c.SwaggerEndpoint("/swagger/v2/swagger.json", "IMS API");
             });
-         
+
             app.UseRouting();
 
             app.UseAuthentication();
