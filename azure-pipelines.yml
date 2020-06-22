@@ -42,3 +42,8 @@ steps:
     ArtifactName: 'drop'
     publishLocation: 'Container'
 
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'NUnit'
+    testResultsFiles: '**/TEST-*.xml'
+    testRunTitle: 'Test Results'
