@@ -14,7 +14,7 @@ namespace IMSRepository.Repository
 
         private readonly IMSContext _context;
         private readonly IDistributedCache _distributedCache;
-
+         
         public VendorRepository(IMSContext context,IDistributedCache distributedCache)
         {
             _context = context;
