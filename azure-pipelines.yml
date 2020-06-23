@@ -33,6 +33,10 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'test'
+- task: PublishCodeCoverageResults@1
+  inputs:
+    codeCoverageTool: 'JaCoCo'
+    summaryFileLocation: 'coverage.opencover.xml'
 - task: SonarCloudAnalyze@1
 - task: SonarCloudPublish@1
   inputs:
