@@ -14,6 +14,7 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+
 - task: SonarCloudPrepare@1
   inputs:
     SonarCloud: 'AzuredevopsToSonarCloud'
@@ -22,13 +23,36 @@ steps:
     projectKey: 'IMS'
     projectName: 'IMS'
     extraProperties: |
+      #sonar.coverage.jacoco.xmlReportPaths=$(Build.SourcesDirectory)/**/coverage.opencover.xml
       sonar.exclusions=**/obj/**,**/*.dll
       sonar.cs.opencover.reportsPaths=$(Build.SourcesDirectory)/**/coverage.opencover.xml
       sonar.cs.vstest.reportsPaths=$(Agent.TempDirectory)/*.trx
           
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'test'
+- task: PublishCodeCoverageResults@1
+  inputs:
+    codeCoverageTool: 'JaCoCo'
+    summaryFileLocation: 'coverage.opencover.xml'
 - task: SonarCloudAnalyze@1
 - task: SonarCloudPublish@1
   inputs:
     pollingTimeoutSec: '300'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'publish'
+    publishWebProjects: true
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'NUnit'
+    testResultsFiles: '*.trx'
+    testRunTitle: 'Test Results'
