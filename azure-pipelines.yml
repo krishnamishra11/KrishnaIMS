@@ -25,7 +25,7 @@ steps:
     extraProperties: |
       #sonar.coverage.jacoco.xmlReportPaths=$(Build.SourcesDirectory)/**/coverage.opencover.xml
       sonar.exclusions=**/obj/**,**/*.dll
-      sonar.coverage.exclusions=*/Migrations/*,*/IMSExceptions/*,*/Models/*,*/Modules/*
+      sonar.coverage.exclusions=*/Migrations/*,*/IMSExceptions/*,*/Models/*,*/Modules/*,*/Repository/*
       sonar.cs.opencover.reportsPaths=$(Build.SourcesDirectory)/**/coverage.opencover.xml
       sonar.cs.vstest.reportsPaths=$(Agent.TempDirectory)/*.trx
           
