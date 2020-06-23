@@ -23,9 +23,9 @@ steps:
     projectKey: 'IMS'
     projectName: 'IMS'
     extraProperties: |
-      #sonar.coverage.jacoco.xmlReportPaths=$(Build.SourcesDirectory)/**/coverage.opencover.xml
+      #sonar.coverage.jacoco.xmlReportPaths=$(Build.SourcesDirectory)/**/coverage.cobertura.xml
       sonar.exclusions=**/obj/**,**/*.dll
-      sonar.cs.opencover.reportsPaths=$(Build.SourcesDirectory)/**/coverage.opencover.xml
+      sonar.cs.opencover.reportsPaths=$(Build.SourcesDirectory)/**/coverage.cobertura.xml
       sonar.cs.vstest.reportsPaths=$(Agent.TempDirectory)/*.trx
           
 - script: dotnet build --configuration $(buildConfiguration)
