@@ -23,10 +23,10 @@ steps:
     projectKey: 'IMS'
     projectName: 'IMS'
     extraProperties: |
-      sonar.coverage.jacoco.xmlReportPaths=$(Build.SourcesDirectory)/**/coverage.opencover.xml
-    #  sonar.exclusions=**/obj/**,**/*.dll
-     # sonar.cs.opencover.reportsPaths=$(Build.SourcesDirectory)/**/coverage.opencover.xml
-     # sonar.cs.vstest.reportsPaths=$(Agent.TempDirectory)/*.trx
+      #sonar.coverage.jacoco.xmlReportPaths=$(Build.SourcesDirectory)/**/coverage.opencover.xml
+      sonar.exclusions=**/obj/**,**/*.dll
+      sonar.cs.opencover.reportsPaths=$(Build.SourcesDirectory)/**/coverage.opencover.xml
+      sonar.cs.vstest.reportsPaths=$(Agent.TempDirectory)/*.trx
           
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
@@ -50,5 +50,5 @@ steps:
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'NUnit'
-    testResultsFiles: '**/TEST-*.xml'
+    testResultsFiles: '**/*.trx'
     testRunTitle: 'Test Results'
