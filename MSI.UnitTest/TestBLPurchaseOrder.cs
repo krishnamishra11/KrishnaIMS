@@ -6,7 +6,7 @@ using Moq;
 using NUnit.Framework;
 using System;
 
-namespace MSI.UnitTest
+namespace UnitTestMSI
 {
     [TestFixture]
     public class TestBLPurchaseOrder

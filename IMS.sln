@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.30128.74
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IMS", "IMS\IMS.csproj", "{AD55F254-B528-4689-8FE4-99376A587DBE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSI.UnitTest", "MSI.UnitTest\MSI.UnitTest.csproj", "{5B7C2832-763E-40D3-9B6E-E45D79686AEF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTestMSI", "MSI.UnitTest\UnitTestMSI.csproj", "{5B7C2832-763E-40D3-9B6E-E45D79686AEF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMSRepository", "IMSRepository\IMSRepository.csproj", "{7025D29C-F268-4CFC-BB61-16B8613A9336}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IMSRepository", "IMSRepository\IMSRepository.csproj", "{7025D29C-F268-4CFC-BB61-16B8613A9336}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

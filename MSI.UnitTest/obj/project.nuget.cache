@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1NEU8CrTvSbDRof1r8A2D52MbL7JpqX/fkpfakUGt8RP52ckSoBXebR6mN8ebosGSgUd1oKvmHbuUv4gH0fOZQ==",
+  "dgSpecHash": "R6QOitCSTTSomilK2mt8hRSp6+2wcndgwqFwdqL62Pvh2PN1YotBVGXuTTBDfr5Xbd3dP66cDmtEgum6CLRo1A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ctsdotnetfsd04\\source\\repos\\KrishnaIMS\\MSI.UnitTest\\MSI.UnitTest.csproj",
+  "projectFilePath": "C:\\Users\\ctsdotnetfsd04\\source\\repos\\KrishnaIMS\\MSI.UnitTest\\UnitTestMSI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ctsdotnetfsd04\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\ctsdotnetfsd04\\.nuget\\packages\\coverlet.msbuild\\2.9.0\\coverlet.msbuild.2.9.0.nupkg.sha512",

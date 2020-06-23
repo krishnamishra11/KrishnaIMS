@@ -5,7 +5,7 @@ using IMSRepository.Models;
 using Moq;
 using NUnit.Framework;
 
-namespace MSI.UnitTest
+namespace UnitTestMSI
 {
     class TestBLVendor
     {

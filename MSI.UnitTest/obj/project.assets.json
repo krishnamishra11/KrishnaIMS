@@ -10419,9 +10419,9 @@
       "IMSRepository >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 16.4.0",
       "Moq >= 4.14.1",
-      "NUnit >= 3.12.0",
       "NUnit3TestAdapter >= 3.16.1",
-      "coverlet.msbuild >= 2.9.0"
+      "coverlet.msbuild >= 2.9.0",
+      "nunit >= 3.12.0"
     ]
   },
   "packageFolders": {
@@ -10431,9 +10431,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ctsdotnetfsd04\\source\\repos\\KrishnaIMS\\MSI.UnitTest\\MSI.UnitTest.csproj",
-      "projectName": "MSI.UnitTest",
-      "projectPath": "C:\\Users\\ctsdotnetfsd04\\source\\repos\\KrishnaIMS\\MSI.UnitTest\\MSI.UnitTest.csproj",
+      "projectUniqueName": "C:\\Users\\ctsdotnetfsd04\\source\\repos\\KrishnaIMS\\MSI.UnitTest\\UnitTestMSI.csproj",
+      "projectName": "UnitTestMSI",
+      "projectPath": "C:\\Users\\ctsdotnetfsd04\\source\\repos\\KrishnaIMS\\MSI.UnitTest\\UnitTestMSI.csproj",
       "packagesPath": "C:\\Users\\ctsdotnetfsd04\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\ctsdotnetfsd04\\source\\repos\\KrishnaIMS\\MSI.UnitTest\\obj\\",
       "projectStyle": "PackageReference",
@@ -10481,10 +10481,6 @@
             "target": "Package",
             "version": "[4.14.1, )"
           },
-          "NUnit": {
-            "target": "Package",
-            "version": "[3.12.0, )"
-          },
           "NUnit3TestAdapter": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
@@ -10496,6 +10492,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[2.9.0, )"
+          },
+          "nunit": {
+            "target": "Package",
+            "version": "[3.12.0, )"
           }
         },
         "imports": [
@@ -10515,9 +10515,6 @@
           }
         ],
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }

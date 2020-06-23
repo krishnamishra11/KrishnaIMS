@@ -6,7 +6,7 @@ using Microsoft.Extensions.Logging;
 using Moq;
 using NUnit.Framework;
 
-namespace MSI.UnitTest
+namespace UnitTestMSI
 {
     [TestFixture]
     public class TestVenorControler
