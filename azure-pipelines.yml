@@ -50,5 +50,5 @@ steps:
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'NUnit'
-    testResultsFiles: '**/*.trx'
+    testResultsFiles: '*.trx'
     testRunTitle: 'Test Results'
