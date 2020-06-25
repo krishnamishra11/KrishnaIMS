@@ -25,6 +25,7 @@ steps:
     extraProperties: |
       #sonar.coverage.jacoco.xmlReportPaths=$(Build.SourcesDirectory)/**/coverage.opencover.xml
       sonar.exclusions=**/obj/**,**/*.dll
+      sonar.coverage.exclusions=*/Migrations/*,*/IMSExceptions/*,*/Models/*,*/Modules/*,*/Repository/*
       sonar.cs.opencover.reportsPaths=$(Build.SourcesDirectory)/**/coverage.opencover.xml
       sonar.cs.vstest.reportsPaths=$(Agent.TempDirectory)/*.trx
           
@@ -33,10 +34,7 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'test'
-- task: PublishCodeCoverageResults@1
-  inputs:
-    codeCoverageTool: 'JaCoCo'
-    summaryFileLocation: 'coverage.opencover.xml'
+    arguments: --configuration $(BuildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
 - task: SonarCloudAnalyze@1
 - task: SonarCloudPublish@1
   inputs:
@@ -44,15 +42,10 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'publish'
-    publishWebProjects: true
+    arguments: '--configuration $(BuildConfiguration) --output "$(build.artifactstagingdirectory)"'
+    zipAfterPublish: True
+
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
 
-- task: PublishTestResults@2
-  inputs:
-    testResultsFormat: 'NUnit'
-    testResultsFiles: '*.trx'
-    testRunTitle: 'Test Results'
