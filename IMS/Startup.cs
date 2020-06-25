@@ -47,6 +47,7 @@ namespace IMS
             services.AddScoped<IVendorRepository, VendorRepository>();
             services.AddScoped<IBLPurchaseOrder, BLPurchaseOrder>();
             services.AddScoped<IPurchaseOrderRepository, PurchaseOrderRepository>();
+            services.AddScoped<IPersonRepository, PersonRepository>();
             services.AddStackExchangeRedisCache(options =>
             {
                 options.Configuration = Configuration["ConnectionString:REDIS"] ;

@@ -8,7 +8,7 @@ using System.Text;
 
 namespace IMSRepository.Repository
 {
-    class PersonRepository:IPersonRepository
+    public class PersonRepository:IPersonRepository
     {
         private readonly IMSContext _context;
         

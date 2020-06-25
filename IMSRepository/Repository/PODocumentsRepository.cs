@@ -1,13 +1,10 @@
 ﻿using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Models;
-using Azure.Storage.Blobs.Specialized;
 using IMSRepository.Models;
 using IMSRepository.Repository.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Threading;
 
 namespace IMSRepository.Repository
 {
@@ -20,6 +17,7 @@ namespace IMSRepository.Repository
             BlobServiceClient _blobServiceClient = new BlobServiceClient(connectionString);
 
             _blobContainter = _blobServiceClient.GetBlobContainerClient(ContainerName);
+            
         }
         public void Add(PODocument podocuments)
         {
@@ -48,17 +46,17 @@ namespace IMSRepository.Repository
             }
         }
 
-        public void Download(int PurchaseOrderId,string FilePath)
+        public Stream Download(int PurchaseOrderId,string FilePath)
         {
             try
             {
                 BlobDownloadInfo download = _blobContainter.GetBlobClient(PurchaseOrderId.ToString()).Download();
-
-                using (FileStream downloadFileStream = File.OpenWrite(FilePath))
-                {
-                    download.Content.CopyTo(downloadFileStream);
-                    downloadFileStream.Close();
-                }
+                
+                FileStream downloadFileStream = File.Open(FilePath, FileMode.OpenOrCreate);
+               
+                   download.Content.CopyTo(downloadFileStream);
+                   return downloadFileStream;
+               
             }catch(Exception ex)
             {
                 throw ex;
