@@ -18,7 +18,7 @@ namespace IMS.Controllers
         private readonly IBLPurchaseOrder  _bLPurchaseOrder;
         private readonly ILogger _logger;
 
-        public PurchaseOrdersController(IBLPurchaseOrder bLPurchaseOrder, ILogger<PurchaseOrder> logger)
+        public PurchaseOrdersController(IBLPurchaseOrder bLPurchaseOrder, ILogger<PurchaseOrdersController> logger)
         {
             _bLPurchaseOrder = bLPurchaseOrder;
             _logger = logger;

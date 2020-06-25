@@ -5,6 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Threading.Tasks;
+using IMSRepository.Repository.Interfaces;
+using Castle.Core.Logging;
+using Microsoft.Extensions.Logging;
 
 namespace IMS.Controllers
 {
@@ -14,54 +17,43 @@ namespace IMS.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private readonly IMSContext _context;
+        private readonly IPersonRepository _personRepository;
         private readonly IJWTAuthManager _jWTAuthManager;
+        private readonly ILogger<AuthController> _logger;
 
-        public AuthController(IMSContext context, IJWTAuthManager jWTAuthManager)
+        public AuthController(IPersonRepository personRepository, IJWTAuthManager jWTAuthManager,ILogger<AuthController> logger)
         {
-            _context = context;
+            _personRepository = personRepository;
             _jWTAuthManager = jWTAuthManager;
+            _logger = logger;
         }
 
 
         [HttpGet]
         public IActionResult GetPerson()
         {
-            return Ok(_context.Person.Select(q => new { q.Id, q.Name }).ToList());
+            
+            return Ok(_personRepository.GetPersons().Select(q => new { q.Id, q.Name }).ToList());
         }
 
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Person>> GetPerson(int id)
+        public ActionResult<Person> GetPerson(int id)
         {
-            var person = await _context.Person.FindAsync(id);
-
-            if (person == null)
-            {
-                return NotFound();
-            }
-            person.Password = "";
-
-            return person;
+            
+            return Ok(_personRepository.FindById(id));
         }
 
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutPerson(int id, Person person)
-        {
-            if (id != person.Id)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(person).State = EntityState.Modified;
-
+        [HttpPut]
+        public  IActionResult PutPerson(Person person)
+        {   
             try
             {
-                await _context.SaveChangesAsync();
+                _personRepository.Edit(person);
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!PersonExists(id))
+                if (_personRepository.FindById(person.Id) ==null)
                 {
                     return NotFound();
                 }
@@ -79,7 +71,7 @@ namespace IMS.Controllers
         [HttpPost("authenticate")]
         public IActionResult Authenticate(Person person)
         {
-            if (!_context.Person.Any(u => u.Name == person.Name && u.Password == person.Password))
+            if (!_personRepository.VerifyPerson(person))
             {
                 return Unauthorized();
             }
@@ -95,15 +87,14 @@ namespace IMS.Controllers
         [HttpPost]
         public void PostPerson(Person person)
         {
-            _context.Person.Add(person);
-            _context.SaveChanges();
+            _personRepository.Add(person);
 
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Person>> DeletePerson(int id)
+        public ActionResult<Person> DeletePerson(int id)
         {
-            var person = await _context.Person.FindAsync(id);
+            var person =  _personRepository.FindById(id);
             if (person == null)
             {
                 return NotFound();
@@ -111,15 +102,10 @@ namespace IMS.Controllers
             if (person.Name == "admin")
                 return BadRequest();
 
-            _context.Person.Remove(person);
-            await _context.SaveChangesAsync();
+            _personRepository.Remove(id);
 
             return person;
         }
 
-        private bool PersonExists(int id)
-        {
-            return _context.Person.Any(e => e.Id == id);
-        }
     }
 }

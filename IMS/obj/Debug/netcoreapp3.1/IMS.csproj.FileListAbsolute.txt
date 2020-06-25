@@ -335,9 +335,6 @@ C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Debug\netcoreapp3.1\IMSR
 C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\obj\Debug\netcoreapp3.1\IMS.csprojAssemblyReference.cache
 C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\obj\Debug\netcoreapp3.1\IMS.AssemblyInfoInputs.cache
 C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\obj\Debug\netcoreapp3.1\IMS.AssemblyInfo.cs
-C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\obj\Debug\netcoreapp3.1\IMS.csproj.CoreCompileInputs.cache
-C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\obj\Debug\netcoreapp3.1\IMS.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\obj\Debug\netcoreapp3.1\IMS.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\obj\Debug\netcoreapp3.1\IMS.RazorTargetAssemblyInfo.cache
 C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\obj\Debug\netcoreapp3.1\IMS.csproj.CopyComplete
 C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\obj\Debug\netcoreapp3.1\staticwebassets\IMS.StaticWebAssets.Manifest.cache
@@ -345,3 +342,11 @@ C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\obj\Debug\netcoreapp3.1\stat
 C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\obj\Debug\netcoreapp3.1\IMS.dll
 C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\obj\Debug\netcoreapp3.1\IMS.pdb
 C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\obj\Debug\netcoreapp3.1\IMS.genruntimeconfig.cache
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Debug\netcoreapp3.1\Azure.Core.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Debug\netcoreapp3.1\Azure.Storage.Blobs.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Debug\netcoreapp3.1\Azure.Storage.Common.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\obj\Debug\netcoreapp3.1\IMS.csproj.CoreCompileInputs.cache
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\obj\Debug\netcoreapp3.1\IMS.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\obj\Debug\netcoreapp3.1\IMS.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll

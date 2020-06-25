@@ -1,5 +1,6 @@
 ﻿using IMS.BusinessLayer.Interfaces;
 using IMSRepository.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -10,6 +11,7 @@ namespace IMS.Controllers
     //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class VendorsController : ControllerBase
     {
         private readonly IBLVendor _blVendor;

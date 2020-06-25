@@ -260,3 +260,8 @@ C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\MSI.UnitTest\obj\Debug\netcoreap
 C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\MSI.UnitTest\obj\Debug\netcoreapp3.1\UnitTestMSI.dll
 C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\MSI.UnitTest\obj\Debug\netcoreapp3.1\UnitTestMSI.pdb
 C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\MSI.UnitTest\obj\Debug\netcoreapp3.1\UnitTestMSI.genruntimeconfig.cache
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\MSI.UnitTest\bin\Debug\netcoreapp3.1\Azure.Core.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\MSI.UnitTest\bin\Debug\netcoreapp3.1\Azure.Storage.Blobs.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\MSI.UnitTest\bin\Debug\netcoreapp3.1\Azure.Storage.Common.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\MSI.UnitTest\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\MSI.UnitTest\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll

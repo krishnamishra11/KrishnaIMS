@@ -1,7 +1,7 @@
 ﻿using IMS.BusinessLayer.Interfaces;
 using IMS.Controllers;
 using IMSRepository.Models;
-using Microsoft.Extensions.Caching.Distributed;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Moq;
 using NUnit.Framework;
@@ -26,8 +26,6 @@ namespace UnitTestMSI
         public void TestGetVendorsById()
         {
             int id = 1;
-            //Added
-            //added
             
             vendorsController.GetVendor(id);
             _blVendor.Verify(q => q.FindById(id), Times.Once);
@@ -44,5 +42,38 @@ namespace UnitTestMSI
             _blVendor.Verify(q => q.Add(vendor), Times.Once);
 
         }
+
+        [Test]
+        public void TestGetVendors_Put()
+        {
+            Vendor vendor = new Vendor();
+            vendorsController.PutVendor(vendor);
+            _blVendor.Verify(q => q.Edit(vendor), Times.Once);
+        }
+
+        [Test]
+        public void TestGetVendors_Put_WithException()
+        {
+            int id = 1;
+            Vendor vendor = new Vendor() {Id=id };
+            
+            _blVendor.Setup(q => q.Edit(vendor)).Throws(new DbUpdateConcurrencyException());
+            vendorsController.PutVendor(vendor);
+            
+            _blVendor.Verify(q => q.FindById(id), Times.Once);
+        }
+
+        [Test]
+        public void TestGetVendors_Delete()
+        {
+            int id = 1;
+            Vendor vendor = new Vendor();
+            _blVendor.Setup(q => q.FindById(id)).Returns(vendor);
+            vendorsController.DeleteVendor(id);
+            _blVendor.Verify(q => q.Remove(id), Times.Once);
+        }
+
+        
+
     }
 }
