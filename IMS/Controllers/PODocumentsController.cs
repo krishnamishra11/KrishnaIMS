@@ -1,7 +1,9 @@
-﻿using IMSRepository.Models;
+﻿using Castle.Core.Logging;
+using IMSRepository.Models;
 using IMSRepository.Repository.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 
 
@@ -12,11 +14,12 @@ namespace IMS.Controllers
     [Authorize]
     public class PODocumentsController : ControllerBase
     {
-        private readonly IPODocumentsRepository _pODocumentsRepository;  
-        public PODocumentsController(IPODocumentsRepository  pODocumentsRepository)
+        private readonly IPODocumentsRepository _pODocumentsRepository;
+        private readonly ILogger<PODocumentsController> _logger;
+        public PODocumentsController(IPODocumentsRepository  pODocumentsRepository, ILogger<PODocumentsController> logger )
         {
             _pODocumentsRepository = pODocumentsRepository;
-
+            _logger = logger;
         }
         
         [HttpGet]
