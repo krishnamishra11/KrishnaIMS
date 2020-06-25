@@ -345,3 +345,8 @@ C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Release\netcoreapp3.1\Mi
 C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Release\netcoreapp3.1\Microsoft.Extensions.Logging.AzureAppServices.dll
 C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Release\netcoreapp3.1\Microsoft.Extensions.Logging.Configuration.dll
 C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Release\netcoreapp3.1\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Release\netcoreapp3.1\Azure.Core.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Release\netcoreapp3.1\Azure.Storage.Blobs.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Release\netcoreapp3.1\Azure.Storage.Common.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Release\netcoreapp3.1\System.IO.Pipelines.dll

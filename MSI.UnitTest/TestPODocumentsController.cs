@@ -25,15 +25,16 @@ namespace UnitTestMSI
                 documentsController = new PODocumentsController(_pODocumentRepository.Object, _logger.Object);
 
             }
-            [Test]
-            public void TestGetPODocumentsById()
-            {
-                int id = 1;
-                string filename = "abc"; 
+            //[Test]
+            //public void TestGetPODocumentsById()
+            //{
+            //    int id = 1;
+            //    string filename = "abc";
+            
+            //    documentsController.Get(id,filename);
 
-                documentsController.Get(id,filename);
-                _pODocumentRepository.Verify(q => q.Download(id,filename), Times.Once);
-            }
+            //    _pODocumentRepository.Verify(q => q.Download(id,filename), Times.Once);
+            //}
 
             [Test]
             public void TestGetPODocuments_Post()
