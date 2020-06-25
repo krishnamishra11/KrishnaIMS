@@ -30,8 +30,7 @@ namespace IMS.Controllers
 
         [HttpGet("{PurchaseOrderId}/{FilePath}")]
         public IActionResult Get([FromQuery]int PurchaseOrderId,[FromQuery]  string FilePath)
-        {
-
+        { 
             return File(_pODocumentsRepository.Download(PurchaseOrderId, FilePath), "application/octet-stream");
         }
 
