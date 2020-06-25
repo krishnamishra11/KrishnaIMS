@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6xnx1EHbg4HZbsK8i24qSStNjqp9sjir5KUy7vYUZqd/edabZ5leii+DTmqWrOuPBwzfohPuU8tCtTwK5TSRFQ==",
+  "dgSpecHash": "duV67wKxX8RKUA/Kq768wdIQ3EHY7MhMX80rkZaN0TINO02pBtC7DRgo1IMhXtgw7aqJkrV1Od9+nOnwtzajsQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ctsdotnetfsd04\\source\\repos\\KrishnaIMS\\MSI.UnitTest\\UnitTestMSI.csproj",
   "expectedPackageFiles": [
@@ -31,6 +31,9 @@
     "C:\\Users\\ctsdotnetfsd04\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\3.1.0\\microsoft.aspnetcore.razor.language.3.1.0.nupkg.sha512",
     "C:\\Users\\ctsdotnetfsd04\\.nuget\\packages\\microsoft.aspnetcore.razor.runtime\\2.2.0\\microsoft.aspnetcore.razor.runtime.2.2.0.nupkg.sha512",
     "C:\\Users\\ctsdotnetfsd04\\.nuget\\packages\\microsoft.aspnetcore.webutilities\\2.2.0\\microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512",
+    "C:\\Users\\ctsdotnetfsd04\\.nuget\\packages\\microsoft.azure.keyvault.core\\2.0.4\\microsoft.azure.keyvault.core.2.0.4.nupkg.sha512",
+    "C:\\Users\\ctsdotnetfsd04\\.nuget\\packages\\microsoft.azure.storage.blob\\11.1.7\\microsoft.azure.storage.blob.11.1.7.nupkg.sha512",
+    "C:\\Users\\ctsdotnetfsd04\\.nuget\\packages\\microsoft.azure.storage.common\\11.1.7\\microsoft.azure.storage.common.11.1.7.nupkg.sha512",
     "C:\\Users\\ctsdotnetfsd04\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\ctsdotnetfsd04\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\ctsdotnetfsd04\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\2.9.4\\microsoft.codeanalysis.analyzers.2.9.4.nupkg.sha512",
@@ -104,7 +107,7 @@
     "C:\\Users\\ctsdotnetfsd04\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\ctsdotnetfsd04\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\ctsdotnetfsd04\\.nuget\\packages\\moq\\4.14.1\\moq.4.14.1.nupkg.sha512",
-    "C:\\Users\\ctsdotnetfsd04\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
+    "C:\\Users\\ctsdotnetfsd04\\.nuget\\packages\\netstandard.library\\2.0.1\\netstandard.library.2.0.1.nupkg.sha512",
     "C:\\Users\\ctsdotnetfsd04\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\ctsdotnetfsd04\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "C:\\Users\\ctsdotnetfsd04\\.nuget\\packages\\nuget.frameworks\\5.0.0\\nuget.frameworks.5.0.0.nupkg.sha512",

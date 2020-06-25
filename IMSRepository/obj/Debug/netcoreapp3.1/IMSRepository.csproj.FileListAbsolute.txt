@@ -5,5 +5,5 @@ C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMSRepository\obj\Debug\netcorea
 C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMSRepository\obj\Debug\netcoreapp3.1\IMSRepository.AssemblyInfo.cs
 C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMSRepository\obj\Debug\netcoreapp3.1\IMSRepository.dll
 C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMSRepository\obj\Debug\netcoreapp3.1\IMSRepository.pdb
-C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMSRepository\obj\Debug\netcoreapp3.1\IMSRepository.csproj.CoreCompileInputs.cache
 C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMSRepository\obj\Debug\netcoreapp3.1\IMSRepository.csprojAssemblyReference.cache
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMSRepository\obj\Debug\netcoreapp3.1\IMSRepository.csproj.CoreCompileInputs.cache

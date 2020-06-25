@@ -2,22 +2,29 @@
 using Azure.Storage.Blobs.Models;
 using IMSRepository.Models;
 using IMSRepository.Repository.Interfaces;
+using Microsoft.Azure.Storage;
+using Microsoft.Azure.Storage.Blob;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace IMSRepository.Repository
 {
     public class PODocumentsRepository : IPODocumentsRepository
     {
         BlobContainerClient _blobContainter;
+        string _connectionstring;
+        string _container;
 
-         public PODocumentsRepository(string connectionString,string ContainerName)
+        public PODocumentsRepository(string connectionString,string ContainerName)
         {
             BlobServiceClient _blobServiceClient = new BlobServiceClient(connectionString);
 
             _blobContainter = _blobServiceClient.GetBlobContainerClient(ContainerName);
-            
+            _connectionstring = connectionString;
+            _container = ContainerName;
+
         }
         public void Add(PODocument podocuments)
         {
@@ -46,18 +53,50 @@ namespace IMSRepository.Repository
             }
         }
 
-        public Stream Download(int PurchaseOrderId,string FilePath)
+        public async Task<Stream> Download(int PurchaseOrderId,string FileName)
         {
             try
             {
-                BlobDownloadInfo download = _blobContainter.GetBlobClient(PurchaseOrderId.ToString()).Download();
-                
-                FileStream downloadFileStream = File.Open(FilePath, FileMode.OpenOrCreate);
-               
-                   download.Content.CopyTo(downloadFileStream);
-                   return downloadFileStream;
-               
-            }catch(Exception ex)
+                //BlobDownloadInfo download = _blobContainter.GetBlobClient(PurchaseOrderId.ToString()).Download();
+
+                //MemoryStream downloadFileStream = new MemoryStream();
+
+                //   await download.Content.CopyToAsync(downloadFileStream);
+
+                //   return downloadFileStream;
+
+                MemoryStream ms = new MemoryStream();
+                if (CloudStorageAccount.TryParse(_connectionstring, out CloudStorageAccount storageAccount))
+                {
+                    CloudBlobClient BlobClient = storageAccount.CreateCloudBlobClient();
+                    CloudBlobContainer container = BlobClient.GetContainerReference(_container);
+
+                    if (await container.ExistsAsync())
+                    {
+                        CloudBlob file = container.GetBlobReference(PurchaseOrderId.ToString());
+
+                        if (await file.ExistsAsync())
+                        {
+                            await file.DownloadToStreamAsync(ms);
+                            Stream blobStream = file.OpenReadAsync().Result;
+                            return blobStream;
+                        }
+                        else
+                        {
+                            throw new Exception( "File does not exist");
+                        }
+                    }
+                    else
+                    {
+                        throw new Exception("Container does not exist");
+                    }
+                }
+                else
+                {
+                    throw new Exception("Error opening storage");
+                }
+            }
+            catch(Exception ex)
             {
                 throw ex;
             }
@@ -84,7 +123,7 @@ namespace IMSRepository.Repository
         {
             try
             {
-                _blobContainter.DeleteBlob(Id.ToString(), DeleteSnapshotsOption.IncludeSnapshots);
+                _blobContainter.DeleteBlob(Id.ToString(), Azure.Storage.Blobs.Models.DeleteSnapshotsOption.IncludeSnapshots);
             }
             catch(Exception)
             {

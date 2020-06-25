@@ -50,6 +50,14 @@
               "target": "Package",
               "version": "[3.1.5, )"
             },
+            "Microsoft.Azure.Storage.Blob": {
+              "target": "Package",
+              "version": "[11.1.7, )"
+            },
+            "Microsoft.Azure.Storage.Common": {
+              "target": "Package",
+              "version": "[11.1.7, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.5, )"

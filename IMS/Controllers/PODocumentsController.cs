@@ -4,8 +4,9 @@ using IMSRepository.Repository.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System;
 using System.Collections.Generic;
-
+using System.Threading.Tasks;
 
 namespace IMS.Controllers
 {
@@ -28,10 +29,20 @@ namespace IMS.Controllers
             return _pODocumentsRepository.GetPODocument();
         }
 
-        [HttpGet("{PurchaseOrderId}/{FilePath}")]
-        public IActionResult Get([FromQuery]int PurchaseOrderId,[FromQuery]  string FilePath)
-        { 
-            return File(_pODocumentsRepository.Download(PurchaseOrderId, FilePath), "application/octet-stream");
+        [HttpGet("{PurchaseOrderId}")]
+        [AllowAnonymous]
+        public async Task<IActionResult> Get(int PurchaseOrderId, [FromQuery]string FileName)
+        {
+            try
+            {
+                var stream = await _pODocumentsRepository.Download(PurchaseOrderId, FileName);
+                 return File(stream, "application/octet-stream", FileName);
+            }
+            catch(Exception  ex)
+            {
+                return BadRequest(ex.Message);
+            }
+             
         }
 
         

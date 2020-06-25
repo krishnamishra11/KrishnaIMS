@@ -1,6 +1,7 @@
 ﻿using IMSRepository.Models;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace IMSRepository.Repository.Interfaces
 {
@@ -10,7 +11,7 @@ namespace IMSRepository.Repository.Interfaces
         public void Edit(PODocument podocuments);
         public void Remove(int Id);
         public IEnumerable<PODocument> GetPODocument();
-        public Stream Download(int PurchaseOrderId, string FilePath);
+        public Task<Stream> Download(int PurchaseOrderId, string FilePath);
         public  IEnumerable<PODocument> FindByName(string podocuments);
     }
 }

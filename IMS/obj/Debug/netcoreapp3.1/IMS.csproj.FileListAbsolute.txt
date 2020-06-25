@@ -350,3 +350,6 @@ C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\obj\Debug\netcoreapp3.1\IMS.
 C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\obj\Debug\netcoreapp3.1\IMS.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
 C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Debug\netcoreapp3.1\Microsoft.Azure.KeyVault.Core.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Debug\netcoreapp3.1\Microsoft.Azure.Storage.Blob.dll
+C:\Users\ctsdotnetfsd04\source\repos\KrishnaIMS\IMS\bin\Debug\netcoreapp3.1\Microsoft.Azure.Storage.Common.dll

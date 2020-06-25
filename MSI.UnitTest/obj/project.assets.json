@@ -369,6 +369,46 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.dll": {}
         }
       },
+      "Microsoft.Azure.KeyVault.Core/2.0.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime": "4.1.0",
+          "System.Threading.Tasks": "4.0.11"
+        },
+        "compile": {
+          "lib/netstandard1.5/Microsoft.Azure.KeyVault.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.5/Microsoft.Azure.KeyVault.Core.dll": {}
+        }
+      },
+      "Microsoft.Azure.Storage.Blob/11.1.7": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Azure.Storage.Common": "11.1.7",
+          "NETStandard.Library": "2.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Azure.Storage.Blob.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Azure.Storage.Blob.dll": {}
+        }
+      },
+      "Microsoft.Azure.Storage.Common/11.1.7": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Azure.KeyVault.Core": "2.0.4",
+          "NETStandard.Library": "2.0.1",
+          "Newtonsoft.Json": "10.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Azure.Storage.Common.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Azure.Storage.Common.dll": {}
+        }
+      },
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
         "type": "package",
         "compile": {
@@ -1679,7 +1719,7 @@
           "lib/netstandard2.0/Moq.dll": {}
         }
       },
-      "NETStandard.Library/2.0.0": {
+      "NETStandard.Library/2.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
@@ -3460,6 +3500,8 @@
         "dependencies": {
           "Azure.Storage.Blobs": "12.4.4",
           "Microsoft.AspNetCore.Http.Features": "3.1.5",
+          "Microsoft.Azure.Storage.Blob": "11.1.7",
+          "Microsoft.Azure.Storage.Common": "11.1.7",
           "Microsoft.EntityFrameworkCore": "3.1.5",
           "Microsoft.Extensions.Caching.StackExchangeRedis": "3.1.5",
           "Newtonsoft.Json": "12.0.3"
@@ -3902,6 +3944,53 @@
         "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.xml",
         "microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512",
         "microsoft.aspnetcore.webutilities.nuspec"
+      ]
+    },
+    "Microsoft.Azure.KeyVault.Core/2.0.4": {
+      "sha512": "BSdPbmZ1BvptdfgECniezEwfQLAyT11MsOm4btXdswjIm8BkLK9eX//yO8ExlafErJg1tAKpCxfNyLTHSlXJvA==",
+      "type": "package",
+      "path": "microsoft.azure.keyvault.core/2.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Microsoft.Azure.KeyVault.Core.dll",
+        "lib/netstandard1.5/Microsoft.Azure.KeyVault.Core.dll",
+        "microsoft.azure.keyvault.core.2.0.4.nupkg.sha512",
+        "microsoft.azure.keyvault.core.nuspec"
+      ]
+    },
+    "Microsoft.Azure.Storage.Blob/11.1.7": {
+      "sha512": "QanFEujuKCJiD6KopY884jLx7LPexuwbWIsg1UTIdJBw6q7crqHoSCFUob2sSDpRTL7eyRpgMh/103AIUk+5Lg==",
+      "type": "package",
+      "path": "microsoft.azure.storage.blob/11.1.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/Microsoft.Azure.Storage.Blob.dll",
+        "lib/net452/Microsoft.Azure.Storage.Blob.xml",
+        "lib/netstandard1.3/Microsoft.Azure.Storage.Blob.dll",
+        "lib/netstandard1.3/Microsoft.Azure.Storage.Blob.xml",
+        "lib/netstandard2.0/Microsoft.Azure.Storage.Blob.dll",
+        "lib/netstandard2.0/Microsoft.Azure.Storage.Blob.xml",
+        "microsoft.azure.storage.blob.11.1.7.nupkg.sha512",
+        "microsoft.azure.storage.blob.nuspec"
+      ]
+    },
+    "Microsoft.Azure.Storage.Common/11.1.7": {
+      "sha512": "qonfDPyO41vUb8PqHmzoD9yJuhB2K3afPHCe6eNv3kl/PKtddjR58BV++8zLE16K/1PMRInXiU+wJ8EJ+DnG7A==",
+      "type": "package",
+      "path": "microsoft.azure.storage.common/11.1.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/Microsoft.Azure.Storage.Common.dll",
+        "lib/net452/Microsoft.Azure.Storage.Common.xml",
+        "lib/netstandard1.3/Microsoft.Azure.Storage.Common.dll",
+        "lib/netstandard1.3/Microsoft.Azure.Storage.Common.xml",
+        "lib/netstandard2.0/Microsoft.Azure.Storage.Common.dll",
+        "lib/netstandard2.0/Microsoft.Azure.Storage.Common.xml",
+        "microsoft.azure.storage.common.11.1.7.nupkg.sha512",
+        "microsoft.azure.storage.common.nuspec"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
@@ -5833,10 +5922,10 @@
         "moq.nuspec"
       ]
     },
-    "NETStandard.Library/2.0.0": {
-      "sha512": "7jnbRU+L08FXKMxqUflxEXtVymWvNOrS8yHgu9s6EM8Anr6T/wIX4nZ08j/u3Asz+tCufp3YVwFSEvFTPYmBPA==",
+    "NETStandard.Library/2.0.1": {
+      "sha512": "oA6nwv9MhEKYvLpjZ0ggSpb1g4CQViDVQjLUcDWg598jtvJbpfeP2reqwI1GLW2TbxC/Ml7xL6BBR1HmKPXlTg==",
       "type": "package",
-      "path": "netstandard.library/2.0.0",
+      "path": "netstandard.library/2.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5959,7 +6048,7 @@
         "build/netstandard2.0/ref/netstandard.dll",
         "build/netstandard2.0/ref/netstandard.xml",
         "lib/netstandard1.0/_._",
-        "netstandard.library.2.0.0.nupkg.sha512",
+        "netstandard.library.2.0.1.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
     },
