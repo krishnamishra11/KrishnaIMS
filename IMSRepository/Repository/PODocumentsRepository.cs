@@ -57,13 +57,6 @@ namespace IMSRepository.Repository
         {
             try
             {
-                //BlobDownloadInfo download = _blobContainter.GetBlobClient(PurchaseOrderId.ToString()).Download();
-
-                //MemoryStream downloadFileStream = new MemoryStream();
-
-                //   await download.Content.CopyToAsync(downloadFileStream);
-
-                //   return downloadFileStream;
 
                 MemoryStream ms = new MemoryStream();
                 if (CloudStorageAccount.TryParse(_connectionstring, out CloudStorageAccount storageAccount))
