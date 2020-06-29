@@ -5,5 +5,7 @@
   </PropertyGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)microsoft.extensions.apidescription.server\3.0.0\build\Microsoft.Extensions.ApiDescription.Server.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.apidescription.server\3.0.0\build\Microsoft.Extensions.ApiDescription.Server.targets')" />
+    <Import Project="$(NuGetPackageRoot)netstandard.library\2.0.1\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('$(NuGetPackageRoot)netstandard.library\2.0.1\build\netstandard2.0\NETStandard.Library.targets')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.azure.services.appauthentication\1.0.1\build\Microsoft.Azure.Services.AppAuthentication.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.azure.services.appauthentication\1.0.1\build\Microsoft.Azure.Services.AppAuthentication.targets')" />
   </ImportGroup>
 </Project>

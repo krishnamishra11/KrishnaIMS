@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroup')]/providers/Microsoft.KeyVault/vaults/IMSvaultForDb",
+      "type": "secrets.keyVault",
+      "connectionId": "ASPNETCORE_HOSTINGSTARTUP__KEYVAULT__CONFIGURATIONVAULT",
+      "secretStore": null
+    },
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroup')]/providers/Microsoft.Sql/servers/imsserverkrishna/databases/IMSDB",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionString/IMSDB",
+      "secretStore": "AzureKeyVault"
+    }
+  }
+}
