@@ -39,7 +39,19 @@ namespace IMSRepository.Repository
                 throw new FileNotFoundException("File Not found");
             }
         }
+        public void Add(PODocumentV2 podocuments)
+        {
 
+            if (podocuments.FileImage != null)
+            {
+                BlobClient blobClient = _blobContainter.GetBlobClient(podocuments.FileImage.FileName);
+                blobClient.Upload(podocuments.FileImage.OpenReadStream(), false);
+            }
+            else
+            {
+                throw new FileNotFoundException("File Not found");
+            }
+        }
         public void Edit(PODocument podocuments)
         {
             if (podocuments.FileImage != null)
@@ -90,6 +102,48 @@ namespace IMSRepository.Repository
                 }
             }
             catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public async Task<Stream> Download(string FileName)
+        {
+            try
+            {
+
+                MemoryStream ms = new MemoryStream();
+                if (CloudStorageAccount.TryParse(_connectionstring, out CloudStorageAccount storageAccount))
+                {
+                    CloudBlobClient BlobClient = storageAccount.CreateCloudBlobClient();
+                    CloudBlobContainer container = BlobClient.GetContainerReference(_container);
+
+                    if (await container.ExistsAsync())
+                    {
+                        CloudBlob file = container.GetBlobReference(FileName);
+
+                        if (await file.ExistsAsync())
+                        {
+                            await file.DownloadToStreamAsync(ms);
+                            Stream blobStream = file.OpenReadAsync().Result;
+                            return blobStream;
+                        }
+                        else
+                        {
+                            throw new Exception("File does not exist");
+                        }
+                    }
+                    else
+                    {
+                        throw new Exception("Container does not exist");
+                    }
+                }
+                else
+                {
+                    throw new Exception("Error opening storage");
+                }
+            }
+            catch (Exception ex)
             {
                 throw ex;
             }

@@ -2,6 +2,8 @@ using IMS.BusinessLayer;
 using IMS.BusinessLayer.Interfaces;
 using IMS.JWTAuth;
 using IMS.JWTAuth.Interfaces;
+using IMSRepository.BusService;
+using IMSRepository.BusService.Interface;
 using IMSRepository.Models;
 using IMSRepository.Models.Interfaces;
 using IMSRepository.Modules;
@@ -10,6 +12,7 @@ using IMSRepository.Repository.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Azure.ServiceBus;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -45,6 +48,8 @@ namespace IMS
             services.AddScoped<IBLPurchaseOrder, BLPurchaseOrder>();
             services.AddScoped<IPurchaseOrderRepository, PurchaseOrderRepository>();
             services.AddScoped<IPersonRepository, PersonRepository>();
+            services.AddScoped<IBusMessageService, BusMessageService>();
+            services.AddScoped<ITopicClient>(q => new TopicClient(Configuration["ConnectionString:ServiceBus"], Configuration["ConnectionString:Topic"]));
             services.AddStackExchangeRedisCache(options =>
             {
                 options.Configuration = Configuration["ConnectionString:REDIS"] ;

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace IMS.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/PODocuments")]
     [ApiController]
     [Authorize]
     public class PODocumentsController : ControllerBase

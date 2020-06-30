@@ -28,7 +28,7 @@ namespace IMS
                         logging.ClearProviders();
                         logging.AddConsole();
                         logging.AddAzureWebAppDiagnostics();
-                    })
+                    });
                     //.ConfigureAppConfiguration(
                     //    (ctx,builder)=>
 

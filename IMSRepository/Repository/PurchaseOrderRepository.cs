@@ -1,6 +1,8 @@
-﻿using IMSRepository.Models;
+﻿using IMSRepository.BusService.Interface;
+using IMSRepository.Models;
 using IMSRepository.Models.Interfaces;
 using IMSRepository.Modules;
+using Microsoft.Azure.ServiceBus;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Internal;
@@ -16,17 +18,21 @@ namespace IMSRepository.Repository
     {
         private readonly IMSContext _context;
         private readonly IDistributedCache _distributedCache;
+        private readonly IBusMessageService _busMessageService;
 
- 
-        public PurchaseOrderRepository(IMSContext context, IDistributedCache distributedCache)
+
+        public PurchaseOrderRepository(IMSContext context, IDistributedCache distributedCache, IBusMessageService busMessageService)
         {
             _context = context;
             _distributedCache = distributedCache;
+            _busMessageService = busMessageService;
         }
         public void Add(PurchaseOrder purchaseOrder)
         {
             _context.PurchaseOrders.Add(purchaseOrder);
             _context.SaveChanges();
+            _busMessageService.SendMessage(purchaseOrder);
+
         }
 
         public void Edit(PurchaseOrder purchaseOrder)
