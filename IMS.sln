@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTestMSI", "MSI.UnitTest
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IMSRepository", "IMSRepository\IMSRepository.csproj", "{7025D29C-F268-4CFC-BB61-16B8613A9336}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadEvens", "ReadEvens\ReadEvens.csproj", "{14667941-9659-4ED7-A8EA-E3D1BE845664}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{7025D29C-F268-4CFC-BB61-16B8613A9336}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7025D29C-F268-4CFC-BB61-16B8613A9336}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7025D29C-F268-4CFC-BB61-16B8613A9336}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14667941-9659-4ED7-A8EA-E3D1BE845664}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14667941-9659-4ED7-A8EA-E3D1BE845664}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14667941-9659-4ED7-A8EA-E3D1BE845664}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14667941-9659-4ED7-A8EA-E3D1BE845664}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
