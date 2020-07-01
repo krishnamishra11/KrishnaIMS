@@ -1,10 +1,10 @@
 ﻿using IMS.BusinessLayer.Interfaces;
 using IMS.IMSExceptions;
 using IMSRepository.Models;
+using IMSRepository.Repository.Interfaces;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using IMSRepository.Repository.Interfaces;
 
 namespace IMS.BusinessLayer
 {

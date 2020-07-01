@@ -1,10 +1,8 @@
 ﻿using IMSRepository.Models;
 using IMSRepository.Repository.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace IMSRepository.Repository
 {

@@ -1,5 +1,4 @@
-﻿using Castle.Core.Logging;
-using IMSRepository.Models;
+﻿using IMSRepository.Models;
 using IMSRepository.Repository.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

@@ -1,4 +1,5 @@
-﻿namespace IMSRepository.Modules { 
+﻿namespace IMSRepository.Modules
+{
     public static class Constants
     {
         public const string RedisCasheGetVendors = "GetVendors";

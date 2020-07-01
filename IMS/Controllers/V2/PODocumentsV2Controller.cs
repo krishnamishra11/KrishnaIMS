@@ -1,9 +1,7 @@
-﻿using Castle.Core.Logging;
-using IMSRepository.Models;
+﻿using IMSRepository.Models;
 using IMSRepository.Repository.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Razor.TagHelpers;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;

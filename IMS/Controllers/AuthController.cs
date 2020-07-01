@@ -1,13 +1,11 @@
 ﻿using IMS.JWTAuth.Interfaces;
 using IMSRepository.Models;
+using IMSRepository.Repository.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Linq;
-using System.Threading.Tasks;
-using IMSRepository.Repository.Interfaces;
-using Castle.Core.Logging;
 using Microsoft.Extensions.Logging;
+using System.Linq;
 
 namespace IMS.Controllers
 {

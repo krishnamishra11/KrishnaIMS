@@ -2,7 +2,6 @@
 using IMSRepository.Models;
 using IMSRepository.Models.Interfaces;
 using IMSRepository.Modules;
-using Microsoft.Azure.ServiceBus;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Internal;

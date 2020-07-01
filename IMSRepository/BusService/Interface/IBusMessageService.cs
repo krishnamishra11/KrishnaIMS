@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace IMSRepository.BusService.Interface
+﻿namespace IMSRepository.BusService.Interface
 {
     public interface IBusMessageService
     {
