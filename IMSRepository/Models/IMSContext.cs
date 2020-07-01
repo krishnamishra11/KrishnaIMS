@@ -2,9 +2,9 @@
 
 namespace IMSRepository.Models
 {
-    public class IMSContext:DbContext
+    public class ImsContext:DbContext
     {
-        public IMSContext(DbContextOptions options):base(options)
+        public ImsContext(DbContextOptions options):base(options)
         { }
 
         public DbSet<Vendor> Vendors { get; set; }

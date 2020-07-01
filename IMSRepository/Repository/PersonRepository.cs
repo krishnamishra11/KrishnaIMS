@@ -8,24 +8,24 @@ namespace IMSRepository.Repository
 {
     public class PersonRepository:IPersonRepository
     {
-        private readonly IMSContext _context;
+        private readonly ImsContext _context;
         
 
-        public PersonRepository(IMSContext context)
+        public PersonRepository(ImsContext context)
         {
             _context = context;
             
         }
-        public void Add(Person Person)
+        public void Add(Person person)
         {
-            _context.Person.Add(Person);
+            _context.Person.Add(person);
             _context.SaveChanges();
         }
 
-        public void Edit(Person Person)
+        public void Edit(Person person)
         {
 
-            _context.Entry(Person).State = EntityState.Modified;
+            _context.Entry(person).State = EntityState.Modified;
             _context.SaveChanges();
 
         }

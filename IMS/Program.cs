@@ -25,20 +25,6 @@ namespace IMS
                         logging.AddConsole();
                         logging.AddAzureWebAppDiagnostics();
                     });
-                    //.ConfigureAppConfiguration(
-                    //    (ctx,builder)=>
-
-                    //    {
-                    //        //Build the config from sources we have
-                    //        var config = builder.Build();
-                    //        //Create Managed Service Identity token provider
-                    //        var tokenProvider = new AzureServiceTokenProvider();
-                    //        //Create the Key Vault client
-                    //        var kvClient = new KeyVaultClient((authority, resource, scope) => tokenProvider.KeyVaultTokenCallback(authority, resource, scope));
-                    //        //Add Key Vault to configuration pipeline
-                    //        builder.AddAzureKeyVault(config["KeyVault:BaseUrl"], kvClient, new DefaultKeyVaultSecretManager());
-                    //    }
-                    //    ); 
                 });
     }
 }

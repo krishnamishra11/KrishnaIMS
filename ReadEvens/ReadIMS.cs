@@ -52,7 +52,7 @@ namespace ReadEvens
 
             msg.AddContent(MimeType.Text, "This is just a simple azure test message!");
             msg.AddContent(MimeType.Html, "<p>Purchage order by air created with purchage order id!"+purchaseOrder.Id+ "</p>");
-            var response = await client.SendEmailAsync(msg);
+             await client.SendEmailAsync(msg);
 
         }
     }

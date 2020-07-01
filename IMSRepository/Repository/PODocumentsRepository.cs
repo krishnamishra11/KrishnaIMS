@@ -13,9 +13,9 @@ namespace IMSRepository.Repository
 {
     public class PODocumentsRepository : IPODocumentsRepository
     {
-        BlobContainerClient _blobContainter;
-        string _connectionstring;
-        string _container;
+        private readonly BlobContainerClient _blobContainter;
+        private readonly string _connectionstring;
+        private readonly string _container;
 
         public PODocumentsRepository(string connectionString,string ContainerName)
         {
@@ -88,17 +88,17 @@ namespace IMSRepository.Repository
                         }
                         else
                         {
-                            throw new Exception( "File does not exist");
+                            throw new FileNotFoundException( "File does not exist");
                         }
                     }
                     else
                     {
-                        throw new Exception("Container does not exist");
+                        throw new FileNotFoundException("Container does not exist");
                     }
                 }
                 else
                 {
-                    throw new Exception("Error opening storage");
+                    throw new FileNotFoundException("Error opening storage");
                 }
             }
             catch(Exception ex)
@@ -130,28 +130,23 @@ namespace IMSRepository.Repository
                         }
                         else
                         {
-                            throw new Exception("File does not exist");
+                            throw new FileNotFoundException("File does not exist");
                         }
                     }
                     else
                     {
-                        throw new Exception("Container does not exist");
+                        throw new FileNotFoundException("Container does not exist");
                     }
                 }
                 else
                 {
-                    throw new Exception("Error opening storage");
+                    throw new FileNotFoundException("Error opening storage");
                 }
             }
-            catch (Exception ex)
+            catch (Exception )
             {
-                throw ex;
+                throw;
             }
-        }
-
-        public IEnumerable<PODocument> FindByName(string podocuments)
-        {
-            throw new NotImplementedException();
         }
 
         public IEnumerable<PODocument> GetPODocument()

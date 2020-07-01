@@ -16,10 +16,10 @@ namespace IMS.Controllers
     public class AuthController : ControllerBase
     {
         private readonly IPersonRepository _personRepository;
-        private readonly IJWTAuthManager _jWTAuthManager;
+        private readonly IJwtAuthManager _jWTAuthManager;
         private readonly ILogger<AuthController> _logger;
 
-        public AuthController(IPersonRepository personRepository, IJWTAuthManager jWTAuthManager,ILogger<AuthController> logger)
+        public AuthController(IPersonRepository personRepository, IJwtAuthManager jWTAuthManager,ILogger<AuthController> logger)
         {
             _personRepository = personRepository;
             _jWTAuthManager = jWTAuthManager;

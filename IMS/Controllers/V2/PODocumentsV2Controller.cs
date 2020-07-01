@@ -51,17 +51,6 @@ namespace IMS.Controllers
             _pODocumentsRepository.Add(pODocument);
         }
 
-        [HttpPut]
-        public void Put([FromBody] PODocument pODocument)
-        {
-            throw new NotImplementedException();
-
-        }
-
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

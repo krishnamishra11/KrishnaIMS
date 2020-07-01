@@ -39,7 +39,7 @@ namespace UnitTestMSI
             [Test]
             public void TestGetPODocuments_Post()
             {
-                int id = 1;
+                
                 PODocument document = new PODocument();
                 
                 documentsController.Post(document);

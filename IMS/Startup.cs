@@ -40,7 +40,7 @@ namespace IMS
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddDbContext<IMSContext>(opts => opts.UseSqlServer(Configuration["ConnectionString:IMSDB"]));
+            services.AddDbContext<ImsContext>(opts => opts.UseSqlServer(Configuration["ConnectionString:IMSDB"]));
             
             services.AddControllers();
             services.AddScoped<IBLVendor, BLVendor>();
@@ -83,7 +83,7 @@ namespace IMS
                     }
                 );
             
-            services.AddSingleton<IJWTAuthManager>(new JWDAuthManager(key));
+            services.AddSingleton<IJwtAuthManager>(new JwtAuthManager(key));
             services.AddSingleton<IPODocumentsRepository>(new PODocumentsRepository(Configuration["ConnectionString:BLOB"], Configuration["ConnectionString:BLOBContainer"]));
 
         }

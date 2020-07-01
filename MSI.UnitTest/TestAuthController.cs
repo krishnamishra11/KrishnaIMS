@@ -17,7 +17,7 @@ namespace UnitTestMSI
         
         Mock<IPersonRepository>   _personRepository;
         Mock<ILogger<AuthController>> _logger;
-        Mock<IJWTAuthManager> _jWTAuthManager;
+        Mock<IJwtAuthManager> _jWTAuthManager;
         AuthController _authController;
         
 
@@ -26,7 +26,7 @@ namespace UnitTestMSI
         {
             _personRepository = new Mock<IPersonRepository>();
             _logger = new Mock<ILogger<AuthController>>();
-            _jWTAuthManager = new Mock<IJWTAuthManager>();
+            _jWTAuthManager = new Mock<IJwtAuthManager>();
             _authController = new AuthController(_personRepository.Object, _jWTAuthManager.Object, _logger.Object);
         }
         [Test]
@@ -42,7 +42,7 @@ namespace UnitTestMSI
         [Test]
         public void TestGetPerson_Post()
         {
-            int id = 1;
+         
             Person person = new Person();
 
             _authController.PostPerson(person);

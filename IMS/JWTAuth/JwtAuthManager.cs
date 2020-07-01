@@ -7,11 +7,11 @@ using System.Text;
 
 namespace IMS.JWTAuth
 {
-    public class JWDAuthManager : IJWTAuthManager
+    public class JwtAuthManager : IJwtAuthManager
     {
         
         private readonly string _key;
-        public JWDAuthManager( string key)
+        public JwtAuthManager( string key)
         {
             _key = key;
             

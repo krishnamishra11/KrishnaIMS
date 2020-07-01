@@ -15,12 +15,12 @@ namespace IMSRepository.Repository
 {
     public class PurchaseOrderRepository : IPurchaseOrderRepository
     {
-        private readonly IMSContext _context;
+        private readonly ImsContext _context;
         private readonly IDistributedCache _distributedCache;
         private readonly IBusMessageService _busMessageService;
 
 
-        public PurchaseOrderRepository(IMSContext context, IDistributedCache distributedCache, IBusMessageService busMessageService)
+        public PurchaseOrderRepository(ImsContext context, IDistributedCache distributedCache, IBusMessageService busMessageService)
         {
             _context = context;
             _distributedCache = distributedCache;

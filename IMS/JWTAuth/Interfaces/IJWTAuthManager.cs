@@ -1,6 +1,6 @@
 ﻿namespace IMS.JWTAuth.Interfaces
 {
-    public interface IJWTAuthManager
+    public interface IJwtAuthManager
     {
         string Authenticate(string name, string password );
     }

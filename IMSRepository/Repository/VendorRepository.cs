@@ -12,10 +12,10 @@ namespace IMSRepository.Repository
     public class VendorRepository : IVendorRepository
     {
 
-        private readonly IMSContext _context;
+        private readonly ImsContext _context;
         private readonly IDistributedCache _distributedCache;
          
-        public VendorRepository(IMSContext context,IDistributedCache distributedCache)
+        public VendorRepository(ImsContext context,IDistributedCache distributedCache)
         {
             _context = context;
             _distributedCache = distributedCache;

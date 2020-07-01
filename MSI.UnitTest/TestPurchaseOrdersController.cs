@@ -35,7 +35,7 @@ namespace UnitTestMSI
         [Test]
         public void TestGetPurchaseOrders_Post()
         {
-            int id = 1;
+         
             PurchaseOrder PurchaseOrder = new PurchaseOrder();
 
             PurchaseOrdersController.PostPurchaseOrder(PurchaseOrder);
